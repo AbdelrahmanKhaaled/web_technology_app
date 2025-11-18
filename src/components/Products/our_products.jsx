@@ -10,6 +10,7 @@ import design from "../../assets/apps_icons/app_design.png";
 import android from "../../assets/apps_icons/app_android.png";
 import ios from "../../assets/apps_icons/app_ios.png";
 import web from "../../assets/apps_icons/app_web.png";
+import background from "../../assets/body-bg.png"
 
 const projects = [
   {
@@ -40,7 +41,6 @@ const links = {
 export default function our_products() {
   const { t } = useTranslation();
 
-  const background = "/src/assets/body-bg.png"
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
@@ -97,3 +97,4 @@ export default function our_products() {
     </section>
   );
 }
+
