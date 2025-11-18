@@ -8,7 +8,7 @@ import x from "../../assets/social_icons/x.png";
 import instagram from "../../assets/social_icons/instagram.png";
 import snapshat from "../../assets/social_icons/snapchat.png";
 import portfolio from "../../assets/portfolio.png";
-import products from "./assets/products.png";
+import products from "../../assets/products.png";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -95,3 +95,4 @@ export default function Home() {
     </section>
   );
 }
+
