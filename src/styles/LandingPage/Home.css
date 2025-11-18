@@ -160,7 +160,6 @@
   background-clip: text;
   color: transparent;
   font-family: var(--fontFamilyTwo);
-  text-align: start;
 }
 
 @media screen and (max-width: 768px) {

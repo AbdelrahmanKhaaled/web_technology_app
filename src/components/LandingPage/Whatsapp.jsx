@@ -8,7 +8,7 @@ export default function Whatsapp() {
   const { t } = useTranslation();
   return (
     <div class="whatsAppCall">
-      <a href="#" target="_blank">
+      <a href="https://Wa.me/+41779996081" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -50,7 +50,7 @@ export default function Whatsapp() {
           </g>
         </svg>
       </a>
-      <a href="#" target="_blank">
+      <a href="tel:+41779996081" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"

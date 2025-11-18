@@ -23,27 +23,7 @@ export default function Home() {
       <div class="content">
         <h1 class="title">{t("homeHead")}</h1>
         <h5 class="des">
-          <p>
-            <p>{t("homeContent1")}</p>
-            <br />
-            <p>{t("homeContent2")}</p>
-            <br />
-            <div>{t("homeContent3")}</div>
-            <br />
-            <div>{t("homeContent4")}</div>
-            <br />
-            <div>{t("homeContent5")}</div>
-            <br />
-            <div>{t("homeContent6")}</div>
-            <br />
-            <div>{t("homeContent7")}</div>
-            <br />  
-            <div>{t("homeContent8")}</div>
-            <br />
-            <div>{t("homeContent9")}</div>
-            <br />
-            <div>{t("homeContent10")}</div>
-          </p>
+          <p>{t("homeContent")}</p>
         </h5>
         <div class="social">
           <a href="#">

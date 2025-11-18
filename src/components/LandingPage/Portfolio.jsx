@@ -9,50 +9,88 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../styles/LandingPage/Portfolio.css";
 import Project from "../ReusableComponents/project";
-import image_cover from "../../assets/project/image_cover.png";
 import arrow from "../../assets/pageArrow.png";
+import image_cover1 from "../../assets/portfolio_images/image_cover1.png";
+import image_cover2 from "../../assets/portfolio_images/image_cover2.png";
+import image_cover3 from "../../assets/portfolio_images/image_cover3.png";
+import image_cover4 from "../../assets/portfolio_images/image_cover4.png";
+import image_cover5 from "../../assets/portfolio_images/image_cover5.png";
+import image_cover6 from "../../assets/portfolio_images/image_cover6.png";
+import image_cover7 from "../../assets/portfolio_images/image_cover7.png";
+import image_cover8 from "../../assets/portfolio_images/image_cover8.png";
+import image_cover9 from "../../assets/portfolio_images/image_cover9.png";
 
-const projects = [
-  {
-    title: "stadtli Kebab Pizza",
-    // desc: "A website for Somu Training Company in the Kingdom of Saudi Arabia.",
-    img: image_cover,
-    link: "/portfolio/1",
-  },
-  {
-    title: "stadtli Kebab Pizza",
-    // desc: "The Abu Batal Slaughterhouse app allows you to purchase the finest livestock meat with ease and convenience...",
-    img: image_cover,
-    link: "/portfolio/1",
-  },
-  {
-    title: "stadtli Kebab Pizza",
-    // desc: "With the Ajel app, you can purchase your needs from participating stores...",
-    img: image_cover,
-    link: "/portfolio/1",
-  },
-  {
-    title: "stadtli Kebab Pizza",
-    // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
-    img: image_cover,
-    link: "/portfolio/1",
-  },
-  {
-    title: "stadtli Kebab Pizza",
-    // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
-    img: image_cover,
-    link: "/portfolio/1",
-  },
-  {
-    title: "stadtli Kebab Pizza",
-    // desc: "A website for Ebhar Platform for book publishing and distribution.",
-    img: image_cover,
-    link: "/portfolio/1",
-  },
-];
+
+
 
 export default function Portfolio() {
   const { t } = useTranslation();
+
+  const projects = [
+  {
+    title: t("portfolioProject1"),
+    // desc: "A website for Somu Training Company in the Kingdom of Saudi Arabia.",
+    img: image_cover1,
+    link: "/portfolio/1",
+    categories: ["website", "ecommerceStores"], // 👈 add this
+  },
+  {
+    title: t("portfolioProject2"),
+    // desc: "The Abu Batal Slaughterhouse app allows you to purchase the finest livestock meat with ease and convenience...",
+    img: image_cover2,
+    link: "/portfolio/1",
+    categories: ["androidApplication", "applicationDesign"],
+  },
+  {
+    title: t("portfolioProject3"),
+    // desc: "With the Ajel app, you can purchase your needs from participating stores...",
+    img: image_cover3,
+    link: "/portfolio/1",
+    categories: ["recruitment", "website"],
+  },
+  {
+    title: t("portfolioProject4"),
+    // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
+    img: image_cover4,
+    link: "/portfolio/1",
+    categories: ["ecommerceStores", "website"],
+  },
+  {
+    title: t("portfolioProject5"),
+    // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
+    img: image_cover5,
+    link: "/portfolio/1",
+    categories: ["lawFirm", "website"],
+  },
+  {
+    title: t("portfolioProject6"),
+    // desc: "A website for Ebhar Platform for book publishing and distribution.",
+    img: image_cover6,
+    link: "/portfolio/1",
+    categories: ["androidApplication", "ecommerceStores"],
+  },
+  {
+    title: t("portfolioProject7"),
+    // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
+    img: image_cover7,
+    link: "/portfolio/1",
+    categories: ["recruitment", "website"],
+  },
+  {
+    title: t("portfolioProject8"),
+    // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
+    img: image_cover8,
+    link: "/portfolio/1",
+    categories: ["recruitment", "website"],
+  },
+  {
+    title: t("portfolioProject9"),
+    // desc: "A website for Ebhar Platform for book publishing and distribution.",
+    img: image_cover9,
+    link: "/portfolio/1",
+    categories: ["androidApplication", "applicationDesign"],
+  },
+];
 
   // 🔹 Reusable fade-up animation identical to AOS
   const fadeUp = (delay = 0) => ({

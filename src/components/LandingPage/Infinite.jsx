@@ -20,7 +20,6 @@ export default function Infinite() {
     t("infinite8"),
     t("infinite9"),
     t("infinite10"),
-    
   ];
 
   // const items = [
@@ -49,29 +48,50 @@ export default function Infinite() {
   return (
     <div class="infinite">
       {/* <!-- Slider Container --> */}
-      <Swiper
+      {/* <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
         slidesPerView="auto"
         loop={true}
-        speed={2000} // 🔹 controls how fast the loop moves
-        allowTouchMove={false} // 🔹 disable manual swiping
+        speed={2000}
+        allowTouchMove={false}
         autoplay={{
-          delay: 0, // 🔹 no pause between transitions
+          delay: 0,
           disableOnInteraction: false,
         }}
-        freeMode={true} // 🔹 allows smooth continuous scroll
+        freeMode={true}
         freeModeMomentum={false}
       >
         {items.map((item, idx) => (
           <SwiperSlide key={idx}>
             <span class="item">{item}</span>
-            {/* <div class="item" href={item.link}>
-              <h4 class="title">{item}</h4>
-            </div> */}
+          </SwiperSlide>
+        ))}
+      </Swiper> */}
+
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={0}
+        slidesPerView="auto"
+        loop={true}
+        speed={6000} // Smooth linear movement
+        allowTouchMove={false}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+        }}
+        // freeMode={true}
+        // freeModeMomentum={false}
+
+        // loopAdditionalSlides={20} // Fix gap / break in loop
+      >
+        {items.map((item, idx) => (
+          <SwiperSlide key={idx}>
+            <span className="item">{item}</span>
           </SwiperSlide>
         ))}
       </Swiper>
+
       {/* <div className="items">
         {items.map((item, idx) => (
           <span className={`item ${idx === activeIndex ? "hidden" : "active" }`} key={idx}>

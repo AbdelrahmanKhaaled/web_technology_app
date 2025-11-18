@@ -215,10 +215,10 @@ export default function Contact() {
                   </div>
                   <div class="text">
                     <h4>{t("contactMessage")}</h4>
-                    <a href="mailto:contact@domain.com">contact@domain.com</a>
+                    <a href="mailto:info@aliweb.ch">info@aliweb.ch</a>
                   </div>
                 </motion.li>
-                <motion.li class="field aos-init" {...fadeUp(250)}>
+                <motion.li class="field" {...fadeUp(250)}>
                   <div class="icon">
                     <svg
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -235,12 +235,7 @@ export default function Contact() {
                   <div class="text">
                     <h4>{t("contactCall")}</h4>
                     <div class="d-flex flex-column gap-2">
-                      <a href="tel:+1234567890">+1234567890</a>
-                      {/* <a href="tel:+201040215480 ">+201040215480 </a>
-                      <a href="tel:+201040652696 ">+201040652696 </a>
-                      <a href="tel:+201096871097">+201096871097</a>
-                      <a href="tel:+9660543214041 ">+9660543214041 </a>
-                      <a href="tel:+9660566717225">+9660566717225</a> */}
+                      <a href="tel:+41779996081">+41779996081</a>
                     </div>
                   </div>
                 </motion.li>

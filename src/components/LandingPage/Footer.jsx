@@ -84,7 +84,7 @@ export default function Footer() {
               <h5 class="title"> {t("footerContactEmail")} </h5>
               <ul>
                 <li>
-                  <a href="mailto:contact@domain.com">
+                  <a href="mailto:info@aliweb.ch">
                     <img
                       loading="lazy"
                       src={mailbox}

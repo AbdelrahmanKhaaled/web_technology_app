@@ -20,6 +20,7 @@ export default function Header() {
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
     localStorage.setItem("lang", lang); // optional – remember user choice
+    setIsLangShow(false);
   };
 
   const navigate = useNavigate();
@@ -38,10 +39,15 @@ export default function Header() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavShow, setIsNavShow] = useState(false);
+  const [isLangShow, setIsLangShow] = useState(false);
   const menuRef = useRef(null);
 
   const handleClickNav = () => {
     setIsNavShow(true);
+  };
+
+  const handleClickLang = () => {
+    setIsLangShow(true);
   };
 
   useEffect(() => {
@@ -143,19 +149,26 @@ export default function Header() {
             <option value="italian">Italiano</option>
           </select> */}
 
-        <select
-            onChange={(e) => changeLanguage(e.target.value)}
-            defaultValue={i18n.language}
-            className="lang-dropdown"
-          >
-            <option value="english">English</option>
-            <option value="german">German</option>
-            <option value="italian">Italiano</option>
-          </select>
+        {/* <select
+          onChange={(e) => changeLanguage(e.target.value)}
+          defaultValue={i18n.language}
+          className="lang-dropdown outlineGradient-select"
+        >
+          <option value="english">English</option>
+          <option value="german">German</option>
+          <option value="italian">Italiano</option>
+        </select> */}
 
-        {/* <a class="language outlineGradient" href="#">
-          <span>ع</span>
-        </a> */}
+        <a onClick={handleClickLang} class="language outlineGradient" href="#">
+          <span>Language</span>
+        </a>
+        <div class={`popup ${isLangShow ? "show" : ""}`}>
+          <div class="lang">
+            <button onClick={() => changeLanguage("english")}>English</button>
+            <button onClick={() => changeLanguage("german")}>German</button>
+            <button onClick={() => changeLanguage("italian")}>Italian</button>
+          </div>
+        </div>
         {/* <button onClick={() => changeLanguage("english")}>En</button>
         <button onClick={() => changeLanguage("german")}>Du</button>
         <button onClick={() => changeLanguage("italian")}>It</button> */}
@@ -163,4 +176,3 @@ export default function Header() {
     </header>
   );
 }
-
