@@ -11,6 +11,7 @@ import quality from "../../assets/vision_icons/quality.png";
 import quick from "../../assets/vision_icons/quick.png";
 import sustainability from "../../assets/vision_icons/sustainability.png";
 import teamwork from "../../assets/vision_icons/teamwork.png";
+import jewel from"../../assets/videos/jewel.mp4";
 
 export default function VisionSection() {
   const { t } = useTranslation();
@@ -118,3 +119,4 @@ export default function VisionSection() {
   );
 
 }
+
