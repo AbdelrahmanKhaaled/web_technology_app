@@ -116,4 +116,5 @@ export default function VisionSection() {
       </div>
     </section>
   );
+
 }
