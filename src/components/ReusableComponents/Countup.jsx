@@ -36,10 +36,17 @@ const Counter = ({ value }) => {
             suffix={value.suffix}
           />
         </h1>
+      <CountUp start={0}
+            end={value.end}
+            duration={6}
+            suffix={value.suffix}
+      >
+      {({ countUpRef }) => <h1 className="counterUp" ref={countUpRef}></h1>}
+    </CountUp>
       ) : (
         <h1 className="counterUp">0</h1>
       )}
-      <p>{value.label}</p>
+      <h6>{value.label}</h6>
     </div>
   );
 };
@@ -158,4 +165,5 @@ export default Counter;
 //   </div>
 //   );
 // }
+
 
