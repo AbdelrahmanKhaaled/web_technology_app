@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import CountUp from "react-countup";
 import "../../styles/ReusableComponents/Countup.css";
 
-export default function Counter = ({ value }) => {
+export default function Counter ({ value }) {
   const [startCounter, setStartCounter] = useState(false);
   const counterRef = useRef(null);
 
@@ -161,6 +161,7 @@ export default function Counter = ({ value }) => {
 //   </div>
 //   );
 // }
+
 
 
 
