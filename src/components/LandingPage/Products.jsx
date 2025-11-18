@@ -4,12 +4,12 @@ import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import Product from "../ReusableComponents/product";
 import { useTranslation } from "react-i18next";
-import arrow from "./assets/pageArrow.png";
-import product from "./assets/product.png";
-import design from "./assets/apps_icons/app_design.png";
-import android from "./assets/apps_icons/app_android.png";
-import ios from "./assets/apps_icons/app_ios.png";
-import web from "./assets/apps_icons/app_web.png";
+import arrow from "../../assets/pageArrow.png";
+import product from "../../assets/product.png";
+import design from "../../assets/apps_icons/app_design.png";
+import android from "../../assets/apps_icons/app_android.png";
+import ios from "../../assets/apps_icons/app_ios.png";
+import web from "../../assets/apps_icons/app_web.png";
 
 export default function Products() {
   const { t } = useTranslation();

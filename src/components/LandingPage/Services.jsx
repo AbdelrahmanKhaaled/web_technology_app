@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import "../../styles/LandingPage/Services.css";
 import Service_Home from "../ReusableComponents/service";
 import { useTranslation } from "react-i18next";
-import icon_1 from "./assets/services_icons/icon1.png";
-import icon_2 from "./assets/services_icons/icon2.png";
-import icon_3 from "./assets/services_icons/icon3.png";
-import icon_4 from "./assets/services_icons/icon4.png";
-import icon_5 from "./assets/services_icons/icon5.png";
-import icon_6 from "./assets/services_icons/icon6.png";
+import icon_1 from "../../assets/services_icons/icon1.png";
+import icon_2 from "../../assets/services_icons/icon2.png";
+import icon_3 from "../../assets/services_icons/icon3.png";
+import icon_4 from "../../assets/services_icons/icon4.png";
+import icon_5 from "../../assets/services_icons/icon5.png";
+import icon_6 from "../../assets/services_icons/icon6.png";
 
 export default function Services() {
   const { t } = useTranslation();

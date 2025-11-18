@@ -3,9 +3,9 @@ import { useState } from "react";
 import "../../styles/Products/product_details.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import image_cover from "./assets/project/image_cover.png";
-import web from "./assets/apps_icons/app_web.png";
-import design from "./assets/apps_icons/app_design.png";
+import image_cover from "../../assets/project/image_cover.png";
+import web from "../../assets/apps_icons/app_web.png";
+import design from "../../assets/apps_icons/app_design.png";
 
 export default function Product_Details() {
   const { t } = useTranslation();

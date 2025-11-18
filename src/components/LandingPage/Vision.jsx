@@ -4,13 +4,13 @@
 import "../../styles/LandingPage/Vision.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import focus from "./assets/vision_icons/focus.png";
-import innovation from "./assets/vision_icons/innovation.png";
-import learning from "./assets/vision_icons/learning.png";
-import quality from "./assets/vision_icons/quality.png";
-import quick from "./assets/vision_icons/quick.png";
-import sustainability from "./assets/vision_icons/sustainability.png";
-import teamwork from "./assets/vision_icons/teamwork.png";
+import focus from "../../assets/vision_icons/focus.png";
+import innovation from "../../assets/vision_icons/innovation.png";
+import learning from "../../assets/vision_icons/learning.png";
+import quality from "../../assets/vision_icons/quality.png";
+import quick from "../../assets/vision_icons/quick.png";
+import sustainability from "../../assets/vision_icons/sustainability.png";
+import teamwork from "../../assets/vision_icons/teamwork.png";
 
 export default function VisionSection() {
   const { t } = useTranslation();

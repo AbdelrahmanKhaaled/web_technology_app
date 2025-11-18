@@ -2,12 +2,12 @@
 import "../../styles/LandingPage/Home.css";
 import Portfolio from "./Portfolio";
 import { useTranslation } from "react-i18next";
-import facebook from "./assets/social_icons/facebook.png";
-import linkedin from "./assets/social_icons/linkedin.png";
-import x from "./assets/social_icons/x.png";
-import instagram from "./assets/social_icons/instagram.png";
-import snapshat from "./assets/social_icons/snapshat.png";
-import portfolio from "./assets/portfolio.png";
+import facebook from "../../assets/social_icons/facebook.png";
+import linkedin from "../../assets/social_icons/linkedin.png";
+import x from "../../assets/social_icons/x.png";
+import instagram from "../../assets/social_icons/instagram.png";
+import snapshat from "../../assets/social_icons/snapchat.png";
+import portfolio from "../../assets/portfolio.png";
 import products from "./assets/products.png";
 
 export default function Home() {

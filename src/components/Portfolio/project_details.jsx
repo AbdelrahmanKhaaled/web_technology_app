@@ -15,11 +15,11 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-import image1 from "./assets/project/image1.png";
-import image2 from "./assets/project/image2.png";
-import android from "./assets/apps_icons/app_android.png";
-import ios from "./assets/apps_icons/app_ios.png";
-import frame from "./assets/frame.png";
+import image1 from "../../assets/project/image1.png";
+import image2 from "../../assets/project/image2.png";
+import android from "../../assets/apps_icons/app_android.png";
+import ios from "../../assets/apps_icons/app_ios.png";
+import frame from "../../assets/frame.png";
 
 export default function Project_Details() {
   const { t } = useTranslation();

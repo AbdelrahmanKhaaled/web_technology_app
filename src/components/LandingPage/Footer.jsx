@@ -9,7 +9,7 @@ import facebook from "../../assets/social_icons/facebook.png";
 import linkedin from "../../assets/social_icons/linkedin.png";
 import x from "../../assets/social_icons/x.png";
 import instagram from "../../assets/social_icons/instagram.png";
-import snapshat from "../../assets/social_icons/snapshat.png";
+import snapshat from "../../assets/social_icons/snapchat.png";
 import logo from "../../assets/new_logo.png";
 
 export default function Footer() {

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import "../../styles/ReusableComponents/service.css";
 import { useTranslation } from "react-i18next";
-import arrow_4 from "./assets/arrow-4.png";
-import arrow_3 from "./assets/arrow-3.png";
+import arrow_4 from "../../assets/arrow-4.png";
+import arrow_3 from "../../assets/arrow-3.png";
 
 export default function Service_Home({ service, index }) {
   const { t } = useTranslation();
