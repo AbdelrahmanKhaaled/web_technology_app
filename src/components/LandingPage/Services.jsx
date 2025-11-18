@@ -2,24 +2,21 @@ import { motion } from "framer-motion";
 import "../../styles/LandingPage/Services.css";
 import Service_Home from "../ReusableComponents/service";
 import { useTranslation } from "react-i18next";
+import icon_1 from "/src/assets/services_icons/icon1.png";
+import icon_2 from "/src/assets/services_icons/icon2.png";
+import icon_3 from "/src/assets/services_icons/icon3.png";
+import icon_4 from "/src/assets/services_icons/icon4.png";
+import icon_5 from "/src/assets/services_icons/icon5.png";
+import icon_6 from "/src/assets/services_icons/icon6.png";
 
 export default function Services() {
   const { t } = useTranslation();
-
-  const images = {
-    icon_1: "/src/assets/services_icons/icon1.png",
-    icon_2: "/src/assets/services_icons/icon2.png",
-    icon_3: "/src/assets/services_icons/icon3.png",
-    icon_4: "/src/assets/services_icons/icon4.png",
-    icon_5: "/src/assets/services_icons/icon5.png",
-    icon_6: "/src/assets/services_icons/icon6.png",
-  };
 
   const services = [
     {
       delay: 50,
       title: t("service1"),
-      icon: images.icon_1,
+      icon: icon_1,
       text: t("serviceContent"),
       href: "/services/1",
       list: [
@@ -34,7 +31,7 @@ export default function Services() {
       delay: 100,
       title: t("service2"),
       href: "services/1",
-      icon: images.icon_2,
+      icon: icon_2,
       text: t("serviceContent"),
       list: [
         t("serviceList2_1"),
@@ -48,7 +45,7 @@ export default function Services() {
       delay: 150,
       title: t("service3"),
       href: "services/1",
-      icon: images.icon_3,
+      icon: icon_3,
       text: t("serviceContent"),
       list: [
         t("serviceList3_1"),
@@ -62,7 +59,7 @@ export default function Services() {
       delay: 200,
       title: t("service4"),
       href: "services/1",
-      icon: images.icon_4,
+      icon: icon_4,
       text: t("serviceContent"),
       list: [
         t("serviceList4_1"),
@@ -76,7 +73,7 @@ export default function Services() {
       delay: 250,
       title: t("service5"),
       href: "services/1",
-      icon: images.icon_5,
+      icon: icon_5,
       text: t("serviceContent"),
       list: [
         t("serviceList5_1"),
@@ -90,7 +87,7 @@ export default function Services() {
       delay: 300,
       title: t("service6"),
       href: "services/1",
-      icon: images.icon_6,
+      icon: icon_6,
       text: t("serviceContent"),
       list: [
         t("serviceList6_1"),
@@ -104,7 +101,7 @@ export default function Services() {
       delay: 350,
       title: t("service7"),
       href: "services/1",
-      icon: images.icon_1,
+      icon: icon_1,
       text: t("serviceContent"),
       list: [
         t("serviceList5_1"),
@@ -118,7 +115,7 @@ export default function Services() {
       delay: 400,
       title: t("service8"),
       href: "services/1",
-      icon: images.icon_2,
+      icon: icon_2,
       text: t("serviceContent"),
       list: [
         t("serviceList6_1"),

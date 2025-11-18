@@ -4,43 +4,40 @@ import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import Product from "../ReusableComponents/product";
 import { useTranslation } from "react-i18next";
+import arrow from "/src/assets/pageArrow.png";
+import product from "/src/assets/product.png";
+import design from "/src/assets/apps_icons/app_design.png";
+import android from "/src/assets/apps_icons/app_android.png";
+import ios from "/src/assets/apps_icons/app_ios.png";
+import web from "/src/assets/apps_icons/app_web.png";
 
 export default function Products() {
   const { t } = useTranslation();
-
-  const images = {
-    arrow: "/src/assets/pageArrow.png",
-    product: "/src/assets/product.png",
-    design: "/src/assets/apps_icons/app_design.png",
-    android: "/src/assets/apps_icons/app_android.png",
-    ios: "/src/assets/apps_icons/app_ios.png",
-    web: "/src/assets/apps_icons/app_web.png",
-  };
 
   const projects = [
     {
       name: "Circle",
       num: 2,
-      img: images.product,
+      img: product,
       link: "/products/1",
     },
     {
       name: "Mishwar",
       num: 2,
-      img: images.product,
+      img: product,
       link: "/products/1",
     },
     {
       name: "ADhmn",
       num: 4,
-      img: images.product,
+      img: product,
       link: "/products/1",
     },
   ];
 
   const links = {
     app: "https://www.figma.com/proto/gceRf6K0pFQNuJWUOhb02e/adhmn?node-id=0-1&viewport=567%2C295%2C0.11&t=Oj8fcL7mlQEe2XCi-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A196",
-    img: images.design,
+    img: design,
   };
 
   // 🔹 Reusable fade-up animation (replicates AOS behavior)
@@ -108,7 +105,7 @@ export default function Products() {
           >
             <span>
               Show all
-              <img loading="lazy" src={images.arrow} alt="arrow" />
+              <img loading="lazy" src={arrow} alt="arrow" />
             </span>
           </motion.a>
         </motion.div>

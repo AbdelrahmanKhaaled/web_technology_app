@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import "../../styles/ReusableComponents/service.css";
 import { useTranslation } from "react-i18next";
+import arrow_4 from "/src/assets/arrow-4.png";
+import arrow_3 from "/src/assets/arrow-3.png";
 
 export default function Service_Home({ service, index }) {
   const { t } = useTranslation();
-
-  const arrow_4 = "/src/assets/arrow-4.png"
-  const arrow_3 = "/src/assets/arrow-3.png"
   
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },

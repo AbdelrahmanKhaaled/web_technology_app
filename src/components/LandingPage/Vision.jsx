@@ -4,19 +4,16 @@
 import "../../styles/LandingPage/Vision.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import focus from "/src/assets/vision_icons/focus.png";
+import innovation from "/src/assets/vision_icons/innovation.png";
+import learning from "/src/assets/vision_icons/learning.png";
+import quality from "/src/assets/vision_icons/quality.png";
+import quick from "/src/assets/vision_icons/quick.png";
+import sustainability from "/src/assets/vision_icons/sustainability.png";
+import teamwork from "/src/assets/vision_icons/teamwork.png";
 
 export default function VisionSection() {
   const { t } = useTranslation();
-
-  const images = {
-    focus: "/src/assets/vision_icons/focus.png",
-    innovation: "/src/assets/vision_icons/innovation.png",
-    learning: "/src/assets/vision_icons/learning.png",
-    quality: "/src/assets/vision_icons/quality.png",
-    quick: "/src/assets/vision_icons/quick.png",
-    sustainability: "/src/assets/vision_icons/sustainability.png",
-    teamwork: "/src/assets/vision_icons/teamwork.png"
-  }
 
   // Reusable fade-up animation
   const fadeUp = (delay = 0) => ({
@@ -81,22 +78,22 @@ export default function VisionSection() {
 
                 <div className="values" {...fadeUp(350)}>
                   {[
-                    { src: images.innovation, alt: t("visionInnovation") },
-                    { src: images.quality, alt: t("visionQuality") },
+                    { src: innovation, alt: t("visionInnovation") },
+                    { src: quality, alt: t("visionQuality") },
                     {
-                      src: images.focus,
+                      src: focus,
                       alt: t("visionFocusClient"),
                     },
-                    { src: images.teamwork, alt: t("visionTeamwork") },
+                    { src: teamwork, alt: t("visionTeamwork") },
                     {
-                      src: images.quick,
+                      src: quick,
                       alt: t("visionQuickResponse"),
                     },
                     {
-                      src: images.learning,
+                      src: learning,
                       alt: t("visionContinuousLearning"),
                     },
-                    { src: images.sustainability, alt: t("visionSustainability") },
+                    { src: sustainability, alt: t("visionSustainability") },
                   ].map((item, index) => (
                     <motion.div
                       className="value"

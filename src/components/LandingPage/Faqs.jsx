@@ -4,13 +4,12 @@ import { useState } from "react";
 import "../../styles/LandingPage/Faqs.css";
 import { motion } from 'framer-motion';
 import { useTranslation } from "react-i18next";
+import arrow from "/src/assets/pageArrow.png";
 
 export default function Faqs() {
   const { t } = useTranslation();
 
   const [open, setOpen] = useState(false);
-
-  const arrow = "/src/assets/pageArrow.png"
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },

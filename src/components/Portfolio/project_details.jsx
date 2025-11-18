@@ -15,23 +15,23 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
+import image1 from "/src/assets/project/image1.png";
+import image2 from "/src/assets/project/image2.png";
+import android from "/src/assets/apps_icons/app_android.png";
+import ios from "/src/assets/apps_icons/app_ios.png";
+import frame from "/src/assets/frame.png";
+
 export default function Project_Details() {
   const { t } = useTranslation();
 
   const images = [
-    "/src/assets/project/image1.png",
-    "/src/assets/project/image2.png",
-    "/src/assets/project/image1.png",
-    "/src/assets/project/image2.png",
-    "/src/assets/project/image1.png",
-    "/src/assets/project/image2.png",
+    image1,
+    image2,
+    image1,
+    image2,
+    image1,
+    image2,
   ];
-
-  const icons = {
-    android: "/src/assets/apps_icons/app_android.png",
-    ios: "/src/assets/apps_icons/app_ios.png",
-    frame: "/src/assets/frame.png"
-  }
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
@@ -81,7 +81,7 @@ export default function Project_Details() {
                       >
                         <img
                           loading="lazy"
-                          src={icons.ios}
+                          src={ios}
                           alt="image"
                         ></img>
                         {t("projectDetailsIOS")}
@@ -93,7 +93,7 @@ export default function Project_Details() {
                       >
                         <img
                           loading="lazy"
-                          src={icons.android}
+                          src={android}
                           alt="image"
                         ></img>
                         {t("projectDetailsAndroid")}
@@ -131,7 +131,7 @@ export default function Project_Details() {
                     ))}
                     <img
                       loading="lazy"
-                      src={icons.frame}
+                      src={frame}
                       class="frame"
                       alt="image"
                     ></img>

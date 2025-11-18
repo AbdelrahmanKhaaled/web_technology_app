@@ -9,50 +9,50 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../styles/LandingPage/Portfolio.css";
 import Project from "../ReusableComponents/project";
+import image_cover from "src/assets/project/image_cover.png";
+import arrow from "/src/assets/pageArrow.png";
 
 const projects = [
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Somu Training Company in the Kingdom of Saudi Arabia.",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "The Abu Batal Slaughterhouse app allows you to purchase the finest livestock meat with ease and convenience...",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "With the Ajel app, you can purchase your needs from participating stores...",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Ebhar Platform for book publishing and distribution.",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
 ];
 
 export default function Portfolio() {
   const { t } = useTranslation();
-
-  const arrow = "/src/assets/pageArrow.png";
 
   // 🔹 Reusable fade-up animation identical to AOS
   const fadeUp = (delay = 0) => ({

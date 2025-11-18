@@ -4,18 +4,15 @@
 import "../../styles/Marketing/marketing.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import call from "/src/assets/marketing/call.png";
+import egypt from "/src/assets/marketing/egypt.png";
+import saudi from "/src/assets/marketing/saudi.png";
+import logo from "/src/assets/new_logo.png";
+import whatsapp from "/src/assets/marketing/whatsapp.png";
+import mailbox from "/src/assets/marketing/mailbox.png";
 
 export default function Marketing() {
   const { t } = useTranslation();
-
-  const images = {
-    call: "/src/assets/marketing/call.png",
-    egypt: "/src/assets/marketing/egypt.png",
-    saudi: "/src/assets/marketing/saudi.png",
-    logo: "/src/assets/new_logo.png",
-    whatsapp: "/src/assets/marketing/whatsapp.png",
-    mailbox: "/src/assets/marketing/mailbox.png"
-  }
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
@@ -62,7 +59,7 @@ export default function Marketing() {
                 <div class="content">
                   <img
                     loading="lazy"
-                    src={images.egypt}
+                    src={egypt}
                     alt="image"
                   ></img>
                   <p class="locaton"> {t("marketingAgent1")} </p>
@@ -72,21 +69,21 @@ export default function Marketing() {
                   <a href="https://wa.me/01099347981" class="whatsApp">
                     <img
                       loading="lazy"
-                      src={images.whatsapp}
+                      src={whatsapp}
                       alt="image"
                     ></img>
                   </a>
                   <a href="mailto:" class="email">
                     <img
                       loading="lazy"
-                      src={images.mailbox}
+                      src={mailbox}
                       alt="image"
                     ></img>
                   </a>
                   <a href="tel:01099347981" class="call">
                     <img
                       loading="lazy"
-                      src={images.call}
+                      src={call}
                       alt="image"
                     ></img>
                   </a>
@@ -96,7 +93,7 @@ export default function Marketing() {
                 <div class="content">
                   <img
                     loading="lazy"
-                    src={images.saudi}
+                    src={saudi}
                     alt="image"
                   ></img>
                   <p class="locaton"> {t("marketingAgent2")} </p>
@@ -106,21 +103,21 @@ export default function Marketing() {
                   <a href="https://wa.me/+966 57 201 9410" class="whatsApp">
                     <img
                       loading="lazy"
-                      src={images.whatsapp}
+                      src={whatsapp}
                       alt="image"
                     ></img>
                   </a>
                   <a href="mailto:" class="email">
                     <img
                       loading="lazy"
-                      src={images.mailbox}
+                      src={mailbox}
                       alt="image"
                     ></img>
                   </a>
                   <a href="tel:+966 54 321 4041" class="call">
                     <img
                       loading="lazy"
-                      src={images.call}
+                      src={call}
                       alt="image"
                     ></img>
                   </a>
@@ -146,7 +143,7 @@ export default function Marketing() {
               <img
                 loading="lazy"
                 class="favimg"
-                src={images.logo}
+                src={logo}
                 alt="Image alt"
               ></img>
               <h5> {t("marketingMarketerHead1")} </h5>
@@ -161,7 +158,7 @@ export default function Marketing() {
               <img
                 loading="lazy"
                 class="favimg"
-                src={images.logo}
+                src={logo}
                 alt="Image alt"
               ></img>
               <h5> {t("marketingMarketerHead1")} </h5>

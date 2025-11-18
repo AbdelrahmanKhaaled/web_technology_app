@@ -2,19 +2,16 @@
 import "../../styles/LandingPage/Home.css";
 import Portfolio from "./Portfolio";
 import { useTranslation } from "react-i18next";
+import facebook from "/src/assets/social_icons/facebook.png";
+import linkedin from "/src/assets/social_icons/linkedin.png";
+import x from "/src/assets/social_icons/x.png";
+import instagram from "/src/assets/social_icons/instagram.png";
+import snapshat from "/src/assets/social_icons/snapshat.png";
+import portfolio from "/src/assets/portfolio.png";
+import products from "/src/assets/products.png";
 
 export default function Home() {
   const { t } = useTranslation();
-
-  const images = {
-    facebook: "/src/assets/social_icons/facebook.png",
-    linkedin: "/src/assets/social_icons/linkedin.png",
-    x: "/src/assets/social_icons/x.png",
-    instagram: "/src/assets/social_icons/instagram.png",
-    snapshat: "/src/assets/social_icons/snapchat.png",
-    portfolio: "/src/assets/portfolio.png",
-    products: "/src/assets/products.png",
-  };
 
   return (
     <section class="activeNavClass home" id="home">
@@ -50,29 +47,29 @@ export default function Home() {
         </h5>
         <div class="social">
           <a href="#">
-            <img loading="lazy" src={images.facebook} alt="facebook"></img>
+            <img loading="lazy" src={facebook} alt="facebook"></img>
           </a>
           <a href="#">
             <img
               loading="lazy"
-              src={images.linkedin}
+              src={linkedin}
               class="mb-1"
               alt="linkedin"
             ></img>
           </a>
           <a href="#">
-            <img loading="lazy" src={images.x} alt="call"></img>
+            <img loading="lazy" src={x} alt="call"></img>
           </a>
           <a href="#">
-            <img loading="lazy" src={images.instagram} alt="call"></img>
+            <img loading="lazy" src={instagram} alt="call"></img>
           </a>
           <a href="#">
-            <img loading="lazy" src={images.snapshat} alt="call"></img>
+            <img loading="lazy" src={snapshat} alt="call"></img>
           </a>
         </div>
         <div class="btns">
           <a href="/portfolio" class="customBtn">
-            <img loading="lazy" src={images.portfolio} alt="image"></img>
+            <img loading="lazy" src={portfolio} alt="image"></img>
             <span> {t("headerPortfolio")} </span>
           </a>
           <div class="requestDemoBtn">
@@ -88,7 +85,7 @@ export default function Home() {
           {/* <a href="/products" class="customBtn">
             <img
               loading="lazy"
-              src={images.products}
+              src={products}
               alt="image"
             ></img>
             <span> Our products </span>

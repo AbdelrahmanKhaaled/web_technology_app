@@ -3,15 +3,12 @@ import { useState } from "react";
 import "../../styles/Products/product_details.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import image_cover from "/src/assets/project/image_cover.png";
+import web from "/src/assets/apps_icons/app_web.png";
+import design from "/src/assets/apps_icons/app_design.png";
 
 export default function Product_Details() {
   const { t } = useTranslation();
-  
-  const images = {
-    image_cover: "/src/assets/project/image_cover.png",
-    web: "/src/assets/apps_icons/app_web.png",
-    design: "/src/assets/apps_icons/app_design.png"
-  }
 
   const [showForm, setShowForm] = useState(false);
 
@@ -59,7 +56,7 @@ export default function Product_Details() {
                 >
                   <img
                     loading="lazy"
-                    src={images.image_cover}
+                    src={image_cover}
                     alt="image"
                   ></img>
                 </motion.a>
@@ -85,7 +82,7 @@ export default function Product_Details() {
                       >
                         <img
                           loading="lazy"
-                          src={images.web}
+                          src={web}
                           alt="image"
                         ></img>
                         website
@@ -97,7 +94,7 @@ export default function Product_Details() {
                       >
                         <img
                           loading="lazy"
-                          src={images.design}
+                          src={design}
                           alt="image"
                         ></img>
                         Application design

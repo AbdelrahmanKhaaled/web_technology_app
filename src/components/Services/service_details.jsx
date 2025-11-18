@@ -2,16 +2,13 @@ import { useState } from "react";
 import "../../styles/Services/service_details.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import background from "/src/assets/body-bg.png";
+import icon from "/src/assets/services_icons/icon1.png";
+import arrow_4 from "/src/assets/arrow-4.png";
+import arrow_3 from "/src/assets/arrow-3.png";
 
 export default function Service_Details() {
   const { t } = useTranslation();
-  
-  const images = {
-    background: "/src/assets/body-bg.png",
-    icon: "/src/assets/services_icons/icon1.png",
-    arrow_3: "/src/assets/arrow-3.png",
-    arrow_4: "/src/assets/arrow-4.png"
-  };
 
   const [showForm, setShowForm] = useState(false);
 
@@ -33,7 +30,7 @@ export default function Service_Details() {
   return (
     <content class="service">
       <img
-        src={images.background}
+        src={background}
         class="body-overlay"
       ></img>
 
@@ -57,7 +54,7 @@ export default function Service_Details() {
                   <img
                     loading="lazy"
                     class="icon serviceIcon"
-                    src={images.icon}
+                    src={icon}
                     alt="servicesIcon"
                   ></img>
                   <motion.h4 class="title aos-init" {...fadeUp(100)}>
@@ -77,7 +74,7 @@ export default function Service_Details() {
                   <span>
                     <img
                       loading="lazy"
-                      src={images.arrow_3}
+                      src={arrow_3}
                       alt="Icon"
                     ></img>
                     {t("serviceDetailsList1")}
@@ -85,7 +82,7 @@ export default function Service_Details() {
                   <span>
                     <img
                       loading="lazy"
-                      src={images.arrow_3}
+                      src={arrow_3}
                       alt="Icon"
                     ></img>
                     {t("serviceDetailsList2")}
@@ -93,7 +90,7 @@ export default function Service_Details() {
                   <span>
                     <img
                       loading="lazy"
-                      src={images.arrow_3}
+                      src={arrow_3}
                       alt="Icon"
                     ></img>
                     {t("serviceDetailsList3")}
@@ -101,7 +98,7 @@ export default function Service_Details() {
                   <span>
                     <img
                       loading="lazy"
-                      src={images.arrow_3}
+                      src={arrow_3}
                       alt="Icon"
                     ></img>
                     {t("serviceDetailsList4")}
@@ -109,7 +106,7 @@ export default function Service_Details() {
                   <span>
                     <img
                       loading="lazy"
-                      src={images.arrow_3}
+                      src={arrow_3}
                       alt="Icon"
                     ></img>
                     {t("serviceDetailsList5")}

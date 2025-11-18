@@ -4,18 +4,16 @@
 import "../../styles/LandingPage/Footer.css";
 import { useTranslation } from "react-i18next";
 
+import mailbox from "/src/assets/mailbox.png";
+import facebook from "/src/assets/social_icons/facebook.png";
+import linkedin from "/src/assets/social_icons/linkedin.png";
+import x from "/src/assets/social_icons/x.png";
+import instagram from "/src/assets/social_icons/instagram.png";
+import snapshat from "/src/assets/social_icons/snapshat.png";
+import logo from "/src/assets/new_logo.png";
+
 export default function Footer() {
   const { t } = useTranslation();
-  const mailbox = "/src/assets/mailbox.png";
-
-  const images = {
-    facebook: "/src/assets/social_icons/facebook.png",
-    linkedin: "/src/assets/social_icons/linkedin.png",
-    x: "/src/assets/social_icons/x.png",
-    instagram: "/src/assets/social_icons/instagram.png",
-    snapshat: "/src/assets/social_icons/snapchat.png",
-    logo: "/src/assets/new_logo.png",
-  };
 
   return (
     <footer>
@@ -27,12 +25,10 @@ export default function Footer() {
                 loading="lazy"
                 class="logo"
                 alt="image"
-                src={images.logo}
+                src={logo}
               ></img>
             </a>
-            <p class="info">
-              {t("footerContent")}
-            </p>
+            <p class="info">{t("footerContent")}</p>
             <p></p>
           </div>
           <div class="col-6 col-lg-3 p-3 ">
@@ -119,29 +115,27 @@ export default function Footer() {
         </div>
         {/* <!-- copywriting --> */}
         <div class="copywriting">
-          <p class="hint">
-            © 2025 {t("footerCopyRight")}
-          </p>
+          <p class="hint">© 2025 {t("footerCopyRight")}</p>
           <div class="social">
             <a href="#" target="_blank">
-              <img loading="lazy" src={images.facebook} alt="facebook"></img>
+              <img loading="lazy" src={facebook} alt="facebook"></img>
             </a>
             <a href="#" target="_blank">
               <img
                 loading="lazy"
-                src={images.linkedin}
+                src={linkedin}
                 class="mb-1"
                 alt="linkedin"
               ></img>
             </a>
             <a href="#" target="_blank">
-              <img loading="lazy" src={images.x} alt="call"></img>
+              <img loading="lazy" src={x} alt="call"></img>
             </a>
             <a href="#" target="_blank">
-              <img loading="lazy" src={images.instagram} alt="call"></img>
+              <img loading="lazy" src={instagram} alt="call"></img>
             </a>
             <a href="#" target="_blank">
-              <img loading="lazy" src={images.snapshat} alt="call"></img>
+              <img loading="lazy" src={snapshat} alt="call"></img>
             </a>
           </div>
         </div>

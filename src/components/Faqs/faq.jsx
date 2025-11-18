@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../../styles/LandingPage/Careers.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import background from "/src/assets/body-bg.png";
 
 export default function Faq() {
   const { t } = useTranslation();
@@ -23,7 +24,7 @@ export default function Faq() {
 
   return (
     <content>
-      <img src="/src/assets/body-bg.png" class="body-overlay"></img>
+      <img src={background} class="body-overlay"></img>
 
       <section class="faqSection activeNavClass" id="faq">
         <div class="container">

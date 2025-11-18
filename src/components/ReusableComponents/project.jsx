@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import "../../styles/ReusableComponents/project.css";
 import { useTranslation } from "react-i18next";
+import arrow_4 from "/src/assets/arrow-4.png";
 
 export default function Project({item, idx}) {
   const { t } = useTranslation();
-
-  const arrow_4 = "/src/assets/arrow-4.png"
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },

@@ -5,54 +5,52 @@ import "../../styles/Portfolio/our_portfolio.css";
 import { motion } from "framer-motion";
 import Project from "../ReusableComponents/project";
 import { useTranslation } from "react-i18next";
+import image_cover from "src/assets/project/image_cover.png";
+import background from "/src/assets/body-bg.png";
+import search from "/src/assets/search.png";
+import arrow_4 from "/src/assets/arrow-4.png";
 
 const projects = [
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Somu Training Company in the Kingdom of Saudi Arabia.",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "The Abu Batal Slaughterhouse app allows you to purchase the finest livestock meat with ease and convenience...",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "With the Ajel app, you can purchase your needs from participating stores...",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
   {
     title: "stadtli Kebab Pizza",
     // desc: "A website for Ebhar Platform for book publishing and distribution.",
-    img: "src/assets/project/image_cover.png",
+    img: image_cover,
     link: "/portfolio/1",
   },
 ];
 
 export default function Our_Portfolio() {
   const { t } = useTranslation();
-
-  const images = {
-    background: "/src/assets/body-bg.png",
-    search: "/src/assets/search.png",
-    arrow_4: "/src/assets/arrow-4.png",
-  };
 
   const [openSection, setOpenSection] = useState("websites");
   const [filters, setFilters] = useState({
@@ -112,7 +110,7 @@ export default function Our_Portfolio() {
 
   return (
     <section className=" o_portfolio">
-      <img src={images.background} class="body-overlay"></img>
+      <img src={background} class="body-overlay"></img>
       <section class="activeNavClass our_portfolio" id="our_portfolio">
         <div class="container">
           <motion.div className="head" {...fadeUp(50)}>
@@ -141,7 +139,7 @@ export default function Our_Portfolio() {
                   onChange={(e) => setSearch(e.target.value)}
                 />
                 <button className="search-btn">
-                  <img src={images.search} alt="search icon"></img>
+                  <img src={search} alt="search icon"></img>
                 </button>
               </motion.div>
 

@@ -9,16 +9,12 @@ import Careers from "./Careers";
 import Faqs from "./Faqs";
 import Contact from "./Contact";
 import "../../styles/LandingPage/LandingPage.css";
+import background from "/src/assets/body-bg.png";
 
 export default function LandingPage() {
-  const background = "/src/assets/body-bg.png"
-
   return (
     <div className="content">
-      <img
-        src={background}
-        class="body-overlay"
-      ></img>
+      <img src={background} class="body-overlay"></img>
       <Home />
       <Aboutus />
       <Vision />
