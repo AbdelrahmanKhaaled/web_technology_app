@@ -11,7 +11,7 @@ import quality from "../../assets/vision_icons/quality.png";
 import quick from "../../assets/vision_icons/quick.png";
 import sustainability from "../../assets/vision_icons/sustainability.png";
 import teamwork from "../../assets/vision_icons/teamwork.png";
-import jewel from"../../assets/videos/jewel.mp4";
+import jewel from "../../assets/videos/jewel.mp4";
 
 export default function VisionSection() {
   const { t } = useTranslation();
@@ -23,8 +23,6 @@ export default function VisionSection() {
     transition: { duration: 0.5, delay: delay / 1000, ease: "easeOut" },
     viewport: { once: true, amount: 0.2 },
   });
-
-  const jewel = "src/assets/videos/jewel.mp4"
 
   return (
     <section className="activeNavClass vision">
