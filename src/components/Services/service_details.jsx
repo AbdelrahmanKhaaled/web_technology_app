@@ -2,10 +2,10 @@ import { useState } from "react";
 import "../../styles/Services/service_details.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import background from "/src/assets/body-bg.png";
-import icon from "/src/assets/services_icons/icon1.png";
-import arrow_4 from "/src/assets/arrow-4.png";
-import arrow_3 from "/src/assets/arrow-3.png";
+import background from "./assets/body-bg.png";
+import icon from "./assets/services_icons/icon1.png";
+import arrow_4 from "./assets/arrow-4.png";
+import arrow_3 from "./assets/arrow-3.png";
 
 export default function Service_Details() {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "../../styles/ReusableComponents/project.css";
 import { useTranslation } from "react-i18next";
-import arrow_4 from "/src/assets/arrow-4.png";
+import arrow_4 from "./assets/arrow-4.png";
 
 export default function Project({item, idx}) {
   const { t } = useTranslation();

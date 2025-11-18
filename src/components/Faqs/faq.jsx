@@ -4,7 +4,7 @@ import { useState } from "react";
 import "../../styles/LandingPage/Careers.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import background from "/src/assets/body-bg.png";
+import background from "./assets/body-bg.png";
 
 export default function Faq() {
   const { t } = useTranslation();

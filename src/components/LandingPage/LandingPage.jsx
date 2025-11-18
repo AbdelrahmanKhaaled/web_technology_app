@@ -9,7 +9,7 @@ import Careers from "./Careers";
 import Faqs from "./Faqs";
 import Contact from "./Contact";
 import "../../styles/LandingPage/LandingPage.css";
-import background from "/src/assets/body-bg.png";
+import background from "./assets/body-bg.png";
 
 export default function LandingPage() {
   return (

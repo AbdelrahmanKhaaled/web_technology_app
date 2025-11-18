@@ -4,7 +4,7 @@ import { useState } from "react";
 import "../../styles/LandingPage/Faqs.css";
 import { motion } from 'framer-motion';
 import { useTranslation } from "react-i18next";
-import arrow from "/src/assets/pageArrow.png";
+import arrow from "./assets/pageArrow.png";
 
 export default function Faqs() {
   const { t } = useTranslation();

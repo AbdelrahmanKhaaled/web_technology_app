@@ -9,8 +9,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../styles/LandingPage/Portfolio.css";
 import Project from "../ReusableComponents/project";
-import image_cover from "src/assets/project/image_cover.png";
-import arrow from "/src/assets/pageArrow.png";
+import image_cover from "./assets/project/image_cover.png";
+import arrow from "./assets/pageArrow.png";
 
 const projects = [
   {

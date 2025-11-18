@@ -5,10 +5,10 @@ import "../../styles/Portfolio/our_portfolio.css";
 import { motion } from "framer-motion";
 import Project from "../ReusableComponents/project";
 import { useTranslation } from "react-i18next";
-import image_cover from "src/assets/project/image_cover.png";
-import background from "/src/assets/body-bg.png";
-import search from "/src/assets/search.png";
-import arrow_4 from "/src/assets/arrow-4.png";
+import image_cover from "./assets/project/image_cover.png";
+import background from "./assets/body-bg.png";
+import search from "./assets/search.png";
+import arrow_4 from "./assets/arrow-4.png";
 
 const projects = [
   {

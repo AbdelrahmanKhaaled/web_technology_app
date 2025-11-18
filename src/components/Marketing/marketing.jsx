@@ -4,12 +4,12 @@
 import "../../styles/Marketing/marketing.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import call from "/src/assets/marketing/call.png";
-import egypt from "/src/assets/marketing/egypt.png";
-import saudi from "/src/assets/marketing/saudi.png";
-import logo from "/src/assets/new_logo.png";
-import whatsapp from "/src/assets/marketing/whatsapp.png";
-import mailbox from "/src/assets/marketing/mailbox.png";
+import call from "./assets/marketing/call.png";
+import egypt from "./assets/marketing/egypt.png";
+import saudi from "./assets/marketing/saudi.png";
+import logo from "./assets/new_logo.png";
+import whatsapp from "./assets/marketing/whatsapp.png";
+import mailbox from "./assets/marketing/mailbox.png";
 
 export default function Marketing() {
   const { t } = useTranslation();
