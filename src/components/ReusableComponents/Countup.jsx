@@ -33,14 +33,15 @@ export default function Counter ({ value }) {
             start={0}
             end={value.end}
             duration={6}
-            suffix={value?.suffix || ""}
+            suffix={value.suffix}
             separator=""
           />
         </h1>
       ) : (
         <h1 className="counterUp">0</h1>
       )}
-      <h6>{value?.label || ""}</h6>
+      <h6>{value.label}</h6>
     </div>
   );
 };
+
