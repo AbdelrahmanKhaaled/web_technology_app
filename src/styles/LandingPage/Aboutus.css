@@ -139,7 +139,7 @@ h4 {
   font-weight: bold;
   color: var(--mainColor);
   text-transform: uppercase;
-  font-family: "fontBold", sans-serif;
+  font-family: var(--fontFamilyTWo);
   font-size: 40px;
   line-height: 1.2;
 }

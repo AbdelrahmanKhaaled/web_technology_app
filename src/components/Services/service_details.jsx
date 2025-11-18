@@ -232,4 +232,3 @@ export default function Service_Details() {
     </content>
   );
 }
-

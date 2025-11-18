@@ -30,7 +30,7 @@ export default function Services() {
     {
       delay: 100,
       title: t("service2"),
-      href: "services/1",
+      href: "/services/1",
       icon: icon_2,
       text: t("serviceContent"),
       list: [
@@ -44,7 +44,7 @@ export default function Services() {
     {
       delay: 150,
       title: t("service3"),
-      href: "services/1",
+      href: "/services/1",
       icon: icon_3,
       text: t("serviceContent"),
       list: [
@@ -58,7 +58,7 @@ export default function Services() {
     {
       delay: 200,
       title: t("service4"),
-      href: "services/1",
+      href: "/services/1",
       icon: icon_4,
       text: t("serviceContent"),
       list: [
@@ -72,7 +72,7 @@ export default function Services() {
     {
       delay: 250,
       title: t("service5"),
-      href: "services/1",
+      href: "/services/1",
       icon: icon_5,
       text: t("serviceContent"),
       list: [
@@ -86,7 +86,7 @@ export default function Services() {
     {
       delay: 300,
       title: t("service6"),
-      href: "services/1",
+      href: "/services/1",
       icon: icon_6,
       text: t("serviceContent"),
       list: [
@@ -100,7 +100,7 @@ export default function Services() {
     {
       delay: 350,
       title: t("service7"),
-      href: "services/1",
+      href: "/services/1",
       icon: icon_1,
       text: t("serviceContent"),
       list: [
@@ -114,7 +114,7 @@ export default function Services() {
     {
       delay: 400,
       title: t("service8"),
-      href: "services/1",
+      href: "/services/1",
       icon: icon_2,
       text: t("serviceContent"),
       list: [

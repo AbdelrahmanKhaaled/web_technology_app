@@ -27,9 +27,9 @@ export default function App() {
           {/* <Route path="/products" element={<Our_Products />} /> */}
           <Route path="/portfolio" element={<Our_Portfolio />} />
           <Route path="/marketing" element={<Marketing />} />
-          {/* <Route path="/products/:id" element={<Product_Details />} /> */}
-          <Route path="/portfolio/:id" element={<Project_Details />} />
-          <Route path="/services/:id" element={<Service_Details />} />
+          {/* <Route path="/products/1" element={<Product_Details />} /> */}
+          <Route path="/portfolio/1" element={<Project_Details />} />
+          <Route path="/services/1" element={<Service_Details />} />
           <Route path="/faqs" element={<Faq />} />
         </Routes>
         <Infinite />

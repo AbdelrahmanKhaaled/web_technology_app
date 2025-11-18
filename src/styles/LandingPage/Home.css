@@ -34,6 +34,7 @@
   top: 0;
   right: 0%;
   box-shadow: 0px 0px 25vw 25vw rgba(233, 32, 42, 0.3019607843);
+  
   z-index: -2;
   opacity: 0.6;
 }
@@ -53,7 +54,7 @@
 .home .lines span {
   width: 1px;
   height: 100%;
-  background: linear-gradient(to bottom, #009f6f33 0%, transparent 100%);
+  background: linear-gradient(to bottom, var(--mainColor20) 0%, transparent 100%);;
   position: relative;
 }
 
@@ -116,7 +117,7 @@
 }
 
 .home .content .title {
-  font-family: var(--fontFamilyThree);
+  font-family: var(--fontFamilyTwo);
   font-size: 60px;
   color: var(--darkColor);
   background: var(--linearGradient);
@@ -199,8 +200,8 @@
   -o-object-fit: contain;
   object-fit: contain;
   transition: var(--transition);
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%)
-    hue-rotate(357deg) brightness(101%) contrast(110%);
+  filter: var(--Filter);
+
 }
 
 .home .content .social a:hover img {
@@ -245,13 +246,7 @@
   width: 20px;
   aspect-ratio: 1;
   transition: var(--transition);
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%)
-    hue-rotate(357deg) brightness(101%) contrast(110%);
-  /* filter: brightness(0) saturate(100%) invert(16%) sepia(91%) saturate(7491%)
-    hue-rotate(356deg) brightness(95%) contrast(105%);
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%)
-    hue-rotate(357deg) brightness(101%) contrast(110%);
-    fill: #e9202a */
+  filter: var(--Filter);
 }
 
 .home .content .btns .customBtn:hover img {

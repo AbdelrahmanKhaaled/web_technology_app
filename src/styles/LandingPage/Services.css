@@ -4,11 +4,8 @@
       rgba(0, 159, 111, 0.768627451),
       rgba(0, 159, 111, 0.7960784314)
     ), */
-    linear-gradient(
-      rgba(233, 32, 42, 0.7960784314),
-      rgba(233, 32, 42, 0.7960784314)
-    ),
-    url(https://nami-tec.com/site/img/services.jpg);
+    linear-gradient(rgba(182, 20, 28, 0.8), rgba(182, 20, 28, 0.8)),
+    url("../../assets/services_icons/back_services.jpg");
   background-size: 300%;
   animation: animateBg 80s linear infinite;
   padding: 80px 8px;
@@ -62,8 +59,9 @@
   gap: 16px;
 }
 
-.h3, h3 {
-    font-size: calc(1.3rem + .6vw);
+.h3,
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
 }
 
 @media (min-width: 1200px) {
@@ -77,7 +75,6 @@
     font-size: 20px;
   }
 }
-
 
 @keyframes animateBg {
   0% {

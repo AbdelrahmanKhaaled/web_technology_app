@@ -57,13 +57,12 @@
   max-width: 120px;
   aspect-ratio: 1;
   mix-blend-mode: multiply;
-  filter: hue-rotate(480deg);
-  /* filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%) hue-rotate(357deg) brightness(101%) contrast(110%) */
+  filter: hue-rotate(120deg);
 }
 
 .vision .container .group .text .title {
   font-weight: bold;
-  font-family: "fontBold", sans-serif !important;
+  font-family: var(--fontFamilyTwo);  
   display: flex;
   align-items: center;
   gap: 8px;
@@ -84,19 +83,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 13px;
-}
-
-.vision .container .group .text .title {
-    font-weight: bold;
-    font-family: "fontBold", sans-serif !important;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--darkColor);
-}
-
-.vision .container .group .text .des {
-    color: var(--grayColor);
 }
 
 .vision .container .values .group .value {
@@ -150,7 +136,7 @@
   padding: 20px;
   margin-bottom: auto;
   mix-blend-mode: unset;
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%) hue-rotate(357deg) brightness(101%) contrast(110%)
+  filter: var(--Filter)
 }
 
 .vision .container .values .value h6 {

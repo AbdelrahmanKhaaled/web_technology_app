@@ -223,6 +223,82 @@ header .inner .navbar .navbar-nav .navLink.active::before {
   cursor: pointer;
 }
 
+.lang-dropdown {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--darkColor);
+  padding: 8px 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+/* WRAPPER STYLE like outlineGradient */
+.outlineGradient-select {
+  position: relative;
+  z-index: 1;
+  background: var(--linearGradient);
+  background-size: 400%;
+  animation: animateBg 5s linear infinite;
+  border-radius: 8px;
+  padding: 0;
+  -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  border-radius: 25%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outlineGradient-select::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  background: var(--whiteColor);
+  border-radius: 8px;
+  transition: var(--transition);
+  -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  border-radius: 25%;
+}
+
+/* hover effect */
+.outlineGradient-select:hover::after {
+  opacity: 0;
+}
+
+.outlineGradient-select:hover select {
+  color: var(--whiteColor);
+}
+
+/* Remove default arrow */
+.lang-dropdown {
+  background-image: none;
+}
+
+/* Custom arrow */
+.outlineGradient-select::before {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  pointer-events: none;
+  color: var(--darkColor);
+}
+
+
 /* header .inner .language {
   width: 50px;
   height: 40px;

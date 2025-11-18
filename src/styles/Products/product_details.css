@@ -128,10 +128,11 @@
   width: 16px;
   height: 16px;
   border-radius: 100px;
-  background: url(https://nami-tec.com/site/img/star.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  filter: var(--Filter);
+  background-image: url("../../assets/star.png");
 }
 
 .productDetails .productBox ul li:nth-child(2n) {
@@ -154,7 +155,7 @@
   border-radius: 100px;
   color: var(--darkColor);
 }
-  
+
 .product .requestDemo {
   width: 100% !important;
 }

@@ -157,7 +157,7 @@ content {
   aspect-ratio: 1;
   -o-object-fit: contain;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%) hue-rotate(357deg) brightness(101%) contrast(110%);
+  filter: var(--Filter)
 }
 
 .productDetails .requestDemo {

@@ -209,22 +209,24 @@ export default function Our_Portfolio() {
               </div>
 
               {/* Other Sections */}
-              {[t("ourPortfolioForm4"), t("ourPortfolioForm5")].map((section) => (
-                <div className="section" key={section}>
-                  <div
-                    className="section-header"
-                    onClick={() => toggleSection(section)}
-                  >
-                    <span>{section}</span>
-                    <span>{openSection === section ? "▴" : "▾"}</span>
-                  </div>
-                  {openSection === section && (
-                    <div className="section-content">
-                      <p>({t("ourPortfolioaddFiltersHere")})</p>
+              {[t("ourPortfolioForm4"), t("ourPortfolioForm5")].map(
+                (section) => (
+                  <div className="section" key={section}>
+                    <div
+                      className="section-header"
+                      onClick={() => toggleSection(section)}
+                    >
+                      <span>{section}</span>
+                      <span>{openSection === section ? "▴" : "▾"}</span>
                     </div>
-                  )}
-                </div>
-              ))}
+                    {openSection === section && (
+                      <div className="section-content">
+                        <p>({t("ourPortfolioaddFiltersHere")})</p>
+                      </div>
+                    )}
+                  </div>
+                )
+              )}
 
               {/* Project Type/Technology */}
               <div className="section">
@@ -312,7 +314,7 @@ export default function Our_Portfolio() {
               {...fadeUp(50)}
             >
               {projects.map((item) => (
-                <Project item={item}/>
+                <Project item={item} />
               ))}
             </motion.div>
           </div>
@@ -321,4 +323,3 @@ export default function Our_Portfolio() {
     </section>
   );
 }
-

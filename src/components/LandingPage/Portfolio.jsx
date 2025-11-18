@@ -77,9 +77,7 @@ export default function Portfolio() {
             </motion.h4>
 
             <motion.h1 className="secTitle animate_words" {...fadeUp(100)}>
-              <div className="anim-reveal-line">
-                {t("portfolioHead2")}
-              </div>
+              <div className="anim-reveal-line">{t("portfolioHead2")}</div>
             </motion.h1>
           </div>
 
@@ -90,11 +88,7 @@ export default function Portfolio() {
           >
             <span>
               {t("portfolioShowAll")}
-              <img
-                loading="lazy"
-                src={arrow}
-                alt="arrow"
-              />
+              <img loading="lazy" src={arrow} alt="arrow" />
             </span>
           </motion.a>
         </motion.div>

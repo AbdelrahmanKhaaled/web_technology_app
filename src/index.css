@@ -1,41 +1,3 @@
-/* #Region All elements */
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  direction: ltr;
-}
-/* #endregion All elements */
-
-/* #Region Body Style */
-body,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-body {
-  overflow-x: hidden !important;
-  width: 100vw;
-  background: var(--whiteColor);
-  font-family: var(--fontFamilyFour);
-}
-/* #endregion Body Style */
-
 /*Region Root Style */
 #root {
   /* max-width: 1280px; */
@@ -47,16 +9,16 @@ body {
 /*endregion Root Style */
 
 :root {
-  --mainColor: #e9202a;
-  --mainColor20: #009f6f33;
-  --mainColor05: #009f6f0d;
+  --mainColor: #b6141c;
+  --mainColor20: #b6141c33;
+  --mainColor05: #b6141c0d;
   --linearGradient: linear-gradient(
     45deg,
-    #ff4d4d 0%,
-    #ff1a1a 50%,
-    #cc0000 100%
+    #d63030 0%,
+    #c11212 50%,
+    #7a0000 100%
   );
-  --secondColor: #ff1a1a;
+  --secondColor: #c11212;
   --goldColor: #f4bd4b;
   --whiteColor: #ffffff;
   --darkColor: #191919;
@@ -66,6 +28,8 @@ body {
   --transition: 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0 16px 32px 0 #071c1f1a;
+  --Filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(7200%)
+    hue-rotate(350deg) brightness(65%) contrast(115%);
 }
 
 :root {
@@ -133,10 +97,44 @@ body[dir="ltr"] {
 }
 
 :root {
-  --fontFamilyOne: "Molengo", sans-serif;
-  --fontFamilyTwo: "Arbutus Slab", serif;
-  --fontFamilyThree: "Arbutus Slab";
-  --fontFamilyFour: "Poppins", sans-serif;
-  --fontFamilyFive: "Inter", sans-serif;
-  --fontFamilySix: "Abril Fatface", cursive;
+  --fontFamilyOne: "fontRegular", sans-serif;
+  --fontFamilyTwo: "fontBold", sans-serif;
 }
+
+/* #Region All elements */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  direction: ltr;
+}
+/* #endregion All elements */
+
+/* #Region Body Style */
+body,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1.6;
+  font-family: var(--fontFamilyOne);
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100vw;
+  background: var(--whiteColor);
+}
+/* #endregion Body Style */

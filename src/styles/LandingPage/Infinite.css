@@ -27,7 +27,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background: url(https://nami-tec.com/site/img/star.png);
+  background: url("../../assets/star.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

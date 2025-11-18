@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import "../../styles/ReusableComponents/project.css";
 import { useTranslation } from "react-i18next";
 import arrow_4 from "../../assets/arrow-4.png";
+import frame from "../../assets/frame.png";
 
 export default function Project({item, idx}) {
   const { t } = useTranslation();
@@ -38,6 +39,11 @@ export default function Project({item, idx}) {
       <figure className="image">
         <img className="lazy" src={item.img} alt={item.title} />
       </figure>
+      {/* <figure className="image">
+        <img loading="lazy" src={frame} class="frame" alt="image"></img>
+        <img className="lazy" src={item.img} alt={item.title} />
+      </figure> */}
+      
     </motion.a>
   );
 }

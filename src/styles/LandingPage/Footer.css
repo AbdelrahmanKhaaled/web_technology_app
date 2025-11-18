@@ -3,9 +3,7 @@ footer {
   position: relative;
   background-color: var(--whiteColor);
   z-index: 2;
-  /* For horizontal scrolling */
   overflow-x: hidden;
-  /* End solution*/
 }
 
 footer::after {
@@ -15,13 +13,6 @@ footer::after {
   height: 4px;
   top: 0%;
   left: 0%;
-  /* background: linear-gradient(
-    90deg,
-    rgb(94, 248, 63) 0%,
-    rgb(0, 226, 169) 33%,
-    rgb(150, 223, 241) 66%,
-    rgb(72, 246, 87) 100%
-  ); */
   background: var(--linearGradient);
   background-size: 400%;
   animation: animateBg 8s linear infinite;
@@ -144,7 +135,7 @@ footer .group ul li img {
   -o-object-position: center;
   object-position: center;
   transition: var(--transition);
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%) hue-rotate(357deg) brightness(101%) contrast(110%);
+  filter: var(--Filter)
 }
 
 footer .copywriting {
@@ -198,7 +189,7 @@ footer .copywriting .social a img {
   -o-object-fit: contain;
   object-fit: contain;
   transition: var(--transition);
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%) hue-rotate(357deg) brightness(101%) contrast(110%);
+  filter: var(--Filter)
 }
 
 footer .copywriting .social a:hover img {

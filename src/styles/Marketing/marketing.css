@@ -4,20 +4,6 @@ content {
   flex-direction: column;
 }
 
-/* .body-overlay {
-  position: fixed;
-  z-index: 1;
-  pointer-events: none;
-  top: 0;
-  opacity: 1;
-  inset-inline-start: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: repeat;
-  background-position: top right;
-  background-image: url(../img/body-bg.png);
-} */
-
 .hero {
   position: relative;
   z-index: 4;

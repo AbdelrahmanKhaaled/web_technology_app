@@ -5,7 +5,8 @@
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.075);
-  border: 2px solid rgba(0, 159, 111, 0.4117647059);
+  border: 2px solid rgba(182, 20, 28, 0.4117647059);;
+  
   padding: 40px;
   border-radius: 24px;
   display: flex;
@@ -98,8 +99,7 @@
 }
 
 .serviceArea .allServices .serviceItem .serviceList span img {
-  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%)
-    hue-rotate(357deg) brightness(101%) contrast(110%);
+  filter: var(--Filter);
 }
 
 .serviceArea .allServices .serviceItem .more {

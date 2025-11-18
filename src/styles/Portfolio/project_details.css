@@ -144,16 +144,6 @@ image .phoneView .swiper {
   right: 50%;
   transform: translate(50%, -50%);
   z-index: 2;
-}
 
-.phoneView .swiper .frame {
-  width: 270px;
-  height: 535px;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  z-index: 2;
-
-  pointer-events: none;   /* <-- this is REQUIRED */
+  pointer-events: none;
 }
