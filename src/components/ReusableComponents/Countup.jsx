@@ -104,15 +104,14 @@ export default function Counter({ value, animate }) {
   }, []);
 
   return (
-    <Wrapper
+    <div ref={counterRef} className="statistic">
+    <motion.div
       {...(animate && {
         initial: { opacity: 0, y: 40 },
         whileInView: { opacity: 1, y: 0 },
         transition: { duration: 0.6 },
-        viewport: { once: true },
       })}
-      className="statistic"
-      ref={counterRef}
+      viewport={{ once: true }}
     >
       {startCounter ? (
         <CountUp
@@ -129,6 +128,7 @@ export default function Counter({ value, animate }) {
       )}
 
       <h6>{value.label}</h6>
-    </Wrapper>
+    </motion.div>
+  </div>
   );
 }
