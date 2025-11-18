@@ -87,21 +87,18 @@ export default function Counter({ value, animate }) {
   const Wrapper = animate ? motion.div : "div";
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setStartCounter(true);
-        }
-      },
-      { threshold: 1 }
-    );
+  if (typeof window === "undefined") return;  // FIX for Vercel
 
-    if (counterRef.current) observer.observe(counterRef.current);
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) setStartCounter(true);
+  }, { threshold: 0.3 });
 
-    return () => {
-      if (counterRef.current) observer.unobserve(counterRef.current);
-    };
-  }, []);
+  if (counterRef.current) observer.observe(counterRef.current);
+
+  return () => {
+    if (counterRef.current) observer.unobserve(counterRef.current);
+  };
+}, []);
 
   return (
     <div ref={counterRef} className="statistic">
@@ -111,7 +108,8 @@ export default function Counter({ value, animate }) {
         whileInView: { opacity: 1, y: 0 },
         transition: { duration: 0.6 },
       })}
-      viewport={{ once: true }}
+      // viewport={{ once: true }}
+      viewport={{ once: true, margin: "200px" }}
     >
       {startCounter ? (
         <CountUp
