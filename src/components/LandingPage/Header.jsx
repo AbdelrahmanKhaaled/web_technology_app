@@ -144,14 +144,14 @@ export default function Header() {
           </select> */}
 
         <select
-          onChange={(e) => changeLanguage(e.target.value)}
-          defaultValue={i18n.language}
-          className="lang-dropdown outlineGradient-select"
-        >
-          <option value="english">English</option>
-          <option value="german">German</option>
-          <option value="italian">Italiano</option>
-        </select>
+            onChange={(e) => changeLanguage(e.target.value)}
+            defaultValue={i18n.language}
+            className="lang-dropdown"
+          >
+            <option value="english">English</option>
+            <option value="german">German</option>
+            <option value="italian">Italiano</option>
+          </select>
 
         {/* <a class="language outlineGradient" href="#">
           <span>ع</span>
@@ -163,3 +163,4 @@ export default function Header() {
     </header>
   );
 }
+
