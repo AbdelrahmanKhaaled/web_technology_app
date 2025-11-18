@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 import { useNavigate } from "react-router-dom";
 
-import logo from "./assets/new_logo.png";
+import logo from "../../assets/new_logo.png";
 
 export default function Header() {
   const { t, i18n } = useTranslation();

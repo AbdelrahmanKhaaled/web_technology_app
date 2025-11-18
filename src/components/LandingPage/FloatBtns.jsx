@@ -3,12 +3,12 @@
 // import "./ClothesPage.css";
 import "../../styles/LandingPage/FloatBtns.css";
 import { useTranslation } from "react-i18next";
-import social from "./assets/social_icons/social.png";
-import facebook from "./assets/social_icons/facebook.png";
-import linkedin from "./assets/social_icons/linkedin.png";
-import x from "./assets/social_icons/x.png";
-import instagram from "./assets/social_icons/instagram.png";
-import snapshat from "./assets/social_icons/snapshat.png";
+import social from "../../assets/social_icons/social.png";
+import facebook from "../../assets/social_icons/facebook.png";
+import linkedin from "../../assets/social_icons/linkedin.png";
+import x from "../../assets/social_icons/x.png";
+import instagram from "../../assets/social_icons/instagram.png";
+import snapshat from "../../assets/social_icons/snapshat.png";
 
 export default function FloatBtns() {
   const { t } = useTranslation();

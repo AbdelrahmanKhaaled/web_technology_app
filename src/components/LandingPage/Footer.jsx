@@ -4,13 +4,13 @@
 import "../../styles/LandingPage/Footer.css";
 import { useTranslation } from "react-i18next";
 
-import mailbox from "./assets/mailbox.png";
-import facebook from "./assets/social_icons/facebook.png";
-import linkedin from "./assets/social_icons/linkedin.png";
-import x from "./assets/social_icons/x.png";
-import instagram from "./assets/social_icons/instagram.png";
-import snapshat from "./assets/social_icons/snapshat.png";
-import logo from "./assets/new_logo.png";
+import mailbox from "../../assets/mailbox.png";
+import facebook from "../../assets/social_icons/facebook.png";
+import linkedin from "../../assets/social_icons/linkedin.png";
+import x from "../../assets/social_icons/x.png";
+import instagram from "../../assets/social_icons/instagram.png";
+import snapshat from "../../assets/social_icons/snapshat.png";
+import logo from "../../assets/new_logo.png";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -143,5 +143,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
