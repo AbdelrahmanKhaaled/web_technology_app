@@ -1,0 +1,41 @@
+.infinite {
+  background: var(--linearGradient);
+  background-size: 400%;
+  animation: animateBg 5s linear infinite;
+  padding: 12px 0;
+  margin-top: 40px;
+}
+
+.infinite .swiper {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.infinite .swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.infinite .swiper .swiper-slide {
+  padding: 8px 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.infinite .swiper .swiper-slide::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(https://nami-tec.com/site/img/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0) invert(1);
+}
+
+.infinite .swiper .swiper-slide .item {
+  padding: 4px 16px;
+  color: #fff;
+  font-size: 18px;
+}

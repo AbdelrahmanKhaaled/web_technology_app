@@ -1,0 +1,160 @@
+.serviceArea .allServices .serviceItem {
+  position: relative;
+  flex: 1 32%;
+  min-width: 300px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.075);
+  border: 2px solid rgba(0, 159, 111, 0.4117647059);
+  padding: 40px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+  text-align: left;
+  color: #fff;
+}
+
+.serviceArea .allServices .serviceItem .serviceRoute {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.serviceArea .allServices .serviceItem .serviceRoute .serviceIcon {
+  width: 56px;
+  height: 56px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.serviceArea .allServices img {
+  transition: var(--transition);
+}
+
+.serviceArea .allServices .serviceItem .serviceRoute span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border: 1px dashed var(--whiteColor);
+  transition: var(--transition);
+}
+
+.serviceArea .allServices .serviceItem .serviceRoute span img {
+  width: 16px;
+  height: 16px;
+  transition: var(--transition);
+  -o-object-fit: contain;
+  object-fit: contain;
+  filter: brightness(0) invert(1) opacity(0.7);
+}
+
+.serviceArea .allServices .serviceItem .subTitle {
+  color: #eee;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.serviceArea .allServices .serviceItem .serviceList {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 16px;
+  border-radius: 24px;
+  background-color: var(--whiteColor);
+  align-content: center;
+  transition: var(--transition);
+  animation: subHide 0.5s forwards;
+}
+
+/*Problem becuase show subHide not subMove*/
+.serviceArea .allServices .serviceItem:hover .serviceList {
+  animation: subMove 0.5s forwards;
+}
+
+.serviceArea .allServices .serviceItem .serviceList span {
+  min-width: calc(50% - 8px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--darkColor);
+  opacity: 1; /*it has to make it opacity:0*/
+  text-align: start;
+  filter: brightness(0.8);
+}
+
+.serviceArea .allServices .serviceItem .serviceList span img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(87%) saturate(7481%)
+    hue-rotate(357deg) brightness(101%) contrast(110%);
+}
+
+.serviceArea .allServices .serviceItem .more {
+  margin-top: auto;
+  color: var(--whiteColor);
+  gap: 8px;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--mainColor);
+  padding: 4px 12px;
+  border-radius: 100px;
+  outline: 2px solid var(--whiteColor);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.serviceArea .allServices .serviceItem:hover .more {
+  opacity: 1;
+  visibility: visible;
+  bottom: 0;
+  z-index: 2;
+}
+
+.serviceArea .allServices .serviceItem .more img {
+  width: 12px;
+  height: 12px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes subHide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes subMove {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

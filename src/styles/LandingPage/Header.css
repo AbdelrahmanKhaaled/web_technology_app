@@ -1,0 +1,327 @@
+/* #Region Header Style */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1024;
+  transition: var(--transition);
+  padding: 12px;
+}
+
+header .inner {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+  border-radius: 100px;
+  transition: var(--transition);
+  width: min(100% - 8px, 1320px);
+  background-color: transparent;
+    /* background-color: #777; */
+}
+
+/* event of header when Scrolling down */
+header .scrolled {
+  width: min(100% - 8px, 1100px);
+  background-color: var(--whiteColor);
+  box-shadow: 0px 20px 100px rgba(233, 32, 42, 0.5411764706);
+  padding: 4px 24px;
+}
+/* #endregion Header Style */
+
+/* #Region LOGO Style */
+header .inner .navbar-brand {
+  margin-right: auto;
+  padding: 8px;
+}
+
+header .inner .navbar-brand img {
+  height: 45px;
+  min-width: 100px;
+  max-width: 250px;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: left;
+  object-position: left;
+  padding-bottom: 2px;
+}
+/* #endregion LOGO Style */
+
+/* #Region Navbar Style */
+header .inner .navbar {
+  padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar {
+    order: 3;
+    padding: 4px;
+    border-radius: 8px;
+  }
+}
+
+header .inner .navbar .navbar-toggler {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar .navbar-toggler {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+header .inner .navbar .navbar-toggler span {
+  width: 25px;
+  height: 2px;
+  background-color: #777;
+}
+
+@media screen and (max-width: 768px) {
+    span, p, body {
+        font-size: 14px;
+    }
+}
+
+header .inner .navbar .navbar-nav {
+  display: flex;
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar .navbar-nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    gap: 8px;
+    background-color: var(--whiteColor);
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1019607843) -20px 10px 9px -4px;
+    width: 300px;
+    text-align: start;
+    padding: 24px;
+    transform: translateX(-400px);
+    transition: var(--transition);
+    z-index: 2;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar .navbar-nav.show {
+    transform: translateX(0px);
+  }
+}
+
+header .inner .navbar .navbar-nav .logo {
+  display: none;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar .navbar-nav .logo {
+    display: block;
+  }
+}
+
+header .inner .navbar .logo img {
+  height: 40px;
+  min-width: 120px;
+  max-width: 250px;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: left;
+  object-position: left;
+}
+
+header .inner .navbar .navbar-nav .navLink {
+  flex: 1;
+  white-space: nowrap;
+  padding: 8px 16px;
+  color: var(--darkColor);
+  transition: var(--transition);
+  border-radius: 16px;
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  font-family: var(--fontFamilyOne);
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar .navbar-nav .navLink {
+    flex: unset;
+    border-radius: 12px;
+  }
+}
+
+header .inner .navbar .navbar-nav .navLink.active {
+  color: var(--whiteColor);
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar .navbar-nav .navLink.active {
+    color: var(--whiteColor);
+    background: var(--linearGradient);
+    background-size: 400%;
+    animation: animateBg 5s linear infinite;
+  }
+}
+
+header .inner .navbar .navbar-nav .navLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--linearGradient);
+  background-size: 400%;
+  animation: animateBg 5s linear infinite;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  transform: translateX(-100%);
+  border-radius: 30%;
+  -webkit-clip-path: polygon(
+    15% 0%,
+    85% 0%,
+    102% 50%,
+    85% 100%,
+    15% 100%,
+    -2% 50%
+  );
+  clip-path: polygon(15% 0%, 85% 0%, 102% 50%, 85% 100%, 15% 100%, -2% 50%);
+}
+
+header .inner .navbar .navbar-nav .navLink.active::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 992px) {
+  header .inner .navbar .navbar-nav .navLink::before {
+    display: none;
+  }
+}
+/* #endregion Navbar Style */
+
+/* #Region Language Style */
+.lang-dropdown {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+/* header .inner .language {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  border-radius: 40%;
+} */
+
+
+/*header .inner in the first of next line*/
+.outlineGradient {
+  position: relative;
+  z-index: 1;
+  background: var(--linearGradient);
+  background-size: 400%;
+  animation: animateBg 5s linear infinite;
+  color: var(--darkColor);
+  border-radius: 8px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  -webkit-clip-path: polygon(
+    15% 0%,
+    85% 0%,
+    100% 50%,
+    85% 100%,
+    15% 100%,
+    0% 50%
+  );
+  clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  border-radius: 25%;
+}
+
+/* header .inner .language span {
+  font-family: "fontBold";
+  color: var(--darkColor);
+} */
+
+.outlineGradient span {
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  color: var(--darkColor);
+  transition: var(--transition);
+}
+
+.outlineGradient:hover span {
+  color: var(--whiteColor) !important;
+}
+
+/* header .inner .language:after {
+  border-radius: 40%;
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+} */
+
+.outlineGradient::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  z-index: 1;
+  transform: translate(-50%, 50%);
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  transition: var(--transition);
+  -webkit-clip-path: polygon(
+    15% 0%,
+    85% 0%,
+    100% 50%,
+    85% 100%,
+    15% 100%,
+    0% 50%
+  );
+  clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  border-radius: 25%;
+}
+
+.outlineGradient:hover::after {
+  opacity: 0;
+}
+/* #endregion Language Style */

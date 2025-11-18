@@ -1,0 +1,136 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "../../styles/LandingPage/Portfolio.css";
+import Project from "../ReusableComponents/project";
+
+const projects = [
+  {
+    title: "stadtli Kebab Pizza",
+    // desc: "A website for Somu Training Company in the Kingdom of Saudi Arabia.",
+    img: "src/assets/project/image_cover.png",
+    link: "/portfolio/1",
+  },
+  {
+    title: "stadtli Kebab Pizza",
+    // desc: "The Abu Batal Slaughterhouse app allows you to purchase the finest livestock meat with ease and convenience...",
+    img: "src/assets/project/image_cover.png",
+    link: "/portfolio/1",
+  },
+  {
+    title: "stadtli Kebab Pizza",
+    // desc: "With the Ajel app, you can purchase your needs from participating stores...",
+    img: "src/assets/project/image_cover.png",
+    link: "/portfolio/1",
+  },
+  {
+    title: "stadtli Kebab Pizza",
+    // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
+    img: "src/assets/project/image_cover.png",
+    link: "/portfolio/1",
+  },
+  {
+    title: "stadtli Kebab Pizza",
+    // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
+    img: "src/assets/project/image_cover.png",
+    link: "/portfolio/1",
+  },
+  {
+    title: "stadtli Kebab Pizza",
+    // desc: "A website for Ebhar Platform for book publishing and distribution.",
+    img: "src/assets/project/image_cover.png",
+    link: "/portfolio/1",
+  },
+];
+
+export default function Portfolio() {
+  const { t } = useTranslation();
+
+  const arrow = "/src/assets/pageArrow.png";
+
+  // 🔹 Reusable fade-up animation identical to AOS
+  const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: {
+      duration: 0.6,
+      delay: delay / 1000,
+      ease: [0.42, 0, 0.58, 1], // same as CSS cubic-bezier(.42, 0, .58, 1)
+    },
+    viewport: { once: true, amount: 0.2 },
+  });
+
+  return (
+    <section className="activeNavClass portfolio" id="portfolio">
+      <div className="container">
+        {/* ===== Section Top ===== */}
+        <motion.div className="sectionTop" {...fadeUp(0)}>
+          <div className="top">
+            <motion.h4 className="secSubTitle animate_words" {...fadeUp(50)}>
+              <div className="anim-reveal-line">{t("portfolioHead1")}</div>
+            </motion.h4>
+
+            <motion.h1 className="secTitle animate_words" {...fadeUp(100)}>
+              <div className="anim-reveal-line">
+                {t("portfolioHead2")}
+              </div>
+            </motion.h1>
+          </div>
+
+          <motion.a
+            href="portfolio"
+            className="outlineGradient"
+            {...fadeUp(150)}
+          >
+            <span>
+              {t("portfolioShowAll")}
+              <img
+                loading="lazy"
+                src={arrow}
+                alt="arrow"
+              />
+            </span>
+          </motion.a>
+        </motion.div>
+
+        {/* ===== Swiper Section ===== */}
+        <Swiper
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={3}
+          speed={1000}
+          autoplay={{
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          breakpoints={{
+            992: {
+              slidesPerView: 3,
+              allowTouchMove: true,
+            },
+            657: {
+              slidesPerView: 2,
+              allowTouchMove: true,
+            },
+            0: {
+              slidesPerView: 1,
+              allowTouchMove: true,
+            },
+          }}
+        >
+          {projects.map((item, idx) => (
+            <SwiperSlide key={idx}>
+              <Project item={item} idx={idx} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
+}

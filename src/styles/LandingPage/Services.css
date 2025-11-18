@@ -1,0 +1,92 @@
+.serviceArea {
+  background:
+    /* linear-gradient(
+      rgba(0, 159, 111, 0.768627451),
+      rgba(0, 159, 111, 0.7960784314)
+    ), */
+    linear-gradient(
+      rgba(233, 32, 42, 0.7960784314),
+      rgba(233, 32, 42, 0.7960784314)
+    ),
+    url(https://nami-tec.com/site/img/services.jpg);
+  background-size: 300%;
+  animation: animateBg 80s linear infinite;
+  padding: 80px 8px;
+}
+
+.serviceArea .container {
+  width: min(100% - 4px, 1320px);
+  max-width: unset;
+  margin: auto;
+}
+
+.serviceArea .serviceTop {
+  text-align: center;
+  padding-bottom: 55px;
+  width: min(100% - 40px, 800px);
+  text-wrap: balance;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  .serviceArea .serviceTop {
+    padding-bottom: 40px;
+  }
+}
+
+.serviceArea .serviceTop .secSubTitle {
+  font-style: italic;
+  font-weight: bold;
+  color: #eee;
+  text-align: center;
+  position: relative;
+}
+
+.serviceArea .serviceTop .secTitle {
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.serviceArea .serviceTop .hint {
+  color: #eee;
+}
+
+.serviceArea .allServices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.h3, h3 {
+    font-size: calc(1.3rem + .6vw);
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}

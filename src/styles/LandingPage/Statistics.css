@@ -1,0 +1,121 @@
+.stats {
+    background-color: var(--whiteColor);
+    z-index: 2;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.stats .container {
+  position: relative;
+  z-index: 4;
+  margin-top: -60px;
+  background: var(--linearGradient);
+  padding: 40px;
+  border-radius: 20px;
+  animation: animateBg 5s linear infinite;
+  background-size: 400%;
+  overflow: hidden;
+}
+
+.shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+}
+
+.shapes span {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 50%;
+  aspect-ratio: 1;
+  border: 4px solid rgba(255, 255, 255, 0.1882352941);
+  border-radius: 60% 60% 40% 40% / 50% 50% 50% 50%;
+  transition: var(--transition);
+  animation: rotate 5s linear infinite;
+}
+
+.shapes span:nth-child(1) {
+  width: 70%;
+}
+
+.container:hover .shapes span:nth-child(1) {
+  width: 90%;
+}
+
+.shapes span:nth-child(2) {
+  width: 50%;
+  border-radius: 50% 50% 40% 50% / 60% 80% 40% 40%;
+  border-width: 8px;
+}
+
+.container:hover .shapes span:nth-child(2) {
+  width: 60%;
+}
+
+.shapes span:nth-child(3) {
+  width: 30%;
+  border-radius: 50% 60% 50% 50% / 60% 60% 80% 40%;
+  border-width: 12px;
+}
+
+.container:hover .shapes span:nth-child(3) {
+  width: 35%;
+}
+
+.stats .container .top {
+  text-align: center;
+  padding-bottom: 55px;
+  width: min(100% - 40px, 800px);
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+    .stats .container .top {
+        padding-bottom: 40px;
+    }
+}
+
+.stats .container .top .secSubTitle {
+  font-style: italic;
+  font-weight: bold;
+  color: #eee;
+}
+
+.stats .container .top .secTitle {
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .stats .container .top .secTitle {
+        font-size: 24px;
+    }
+}
+
+.stats .container .all {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: translate(50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(50%, -50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,62 @@
+.aboutPage .statistic {
+  padding: 8px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.aboutPage .statistic .counterUp {
+  font-weight: bold;
+  font-size: 100px;
+  background: rgba(167, 169, 172, 0.062745098);
+  background-size: contain;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1px #a7a9ac;
+  font-family: "Manrope Alt", Sans-serif;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .aboutPage .statistic .counterUp {
+    font-size: 70px;
+  }
+}
+
+.aboutPage .statistic h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  max-height: 100px;
+  text-align: center;
+  transform: scaleY(-1);
+}
+
+
+.stats .container .all .statistic {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.0549019608);
+  border-radius: 16px;
+  padding: 24px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.0549019608);
+}
+
+.stats .container .all .statistic .counterUp {
+  font-weight: bold;
+  color: #fff;
+}
+
+.stats .container .all .statistic h6 {
+  font-family: sans-serif;
+  text-transform: capitalize;
+  color: #fff;
+}

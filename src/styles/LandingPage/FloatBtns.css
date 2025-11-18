@@ -1,0 +1,104 @@
+.floatBtns {
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+
+.floatBtns .main,
+.floatBtns a {
+  cursor: pointer;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.floatBtns .main {
+  position: relative;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  background: var(--linearGradient);
+  background-size: 400%;
+  animation: animateBg 5s linear infinite;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1843137255);
+  color: var(--darkColor);
+  border-radius: 0 100% 100% 0;
+}
+
+.floatBtns .main img,
+.floatBtns a img {
+  width: 16px;
+  height: 16px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.floatBtns .main img {
+  width: 24px;
+  height: 24px;
+}
+
+.floatBtns .subs a {
+  box-shadow: none;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(0px) translateY(0px);
+  border: 1px solid var(--whiteColor);
+}
+
+.floatBtns .subs a:nth-child(1) {
+  transition-delay: 0.2s, 0s, 0.2s;
+}
+
+.floatBtns .subs a:nth-child(2) {
+  transition-delay: 0.3s, 0s, 0.3s;
+}
+
+.floatBtns .subs a:nth-child(3) {
+  transition-delay: 0.4s, 0s, 0.4s;
+}
+
+.floatBtns .subs a:nth-child(4) {
+  transition-delay: 0.5s, 0s, 0.5s;
+}
+
+.floatBtns:hover .subs a {
+  box-shadow: 0 2 4 var(--darkColor);
+  opacity: 1;
+  visibility: visible;
+}
+
+.floatBtns:hover .subs a:nth-child(1) {
+  transform: translateX(0px) translateY(-70px);
+}
+
+.floatBtns:hover .subs a:nth-child(2) {
+  transform: translateX(45px) translateY(-47px);
+}
+
+.floatBtns:hover .subs a:nth-child(3) {
+  transform: translateX(60px) translateY(-0px);
+}
+
+.floatBtns:hover .subs a:nth-child(4) {
+  transform: translateX(45px) translateY(47px);
+}
+
+.floatBtns .subs a:nth-child(5) {
+  transition-delay: 0.6s, 0s, 0.6s;
+}
+
+.floatBtns:hover .subs a:nth-child(5) {
+  transform: translateX(0px) translateY(70px);
+}

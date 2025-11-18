@@ -1,0 +1,159 @@
+.productDetails .productSlider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .productDetails .productSlider {
+    flex-direction: row-reverse;
+  }
+}
+
+.productDetails .swiper {
+  width: 100%;
+}
+
+.productDetails .productSlider .slider {
+  aspect-ratio: 1;
+  max-height: 600px;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 992px) {
+  .productDetails .productSlider .slider {
+    flex: 5;
+  }
+}
+
+.productDetails .productSlider .swiper-slide {
+  position: relative;
+}
+
+.productDetails .productSlider .swiper-slide iframe,
+.productDetails .productSlider .swiper-slide video,
+.productDetails .productSlider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.productDetails .productSlider .slider img {
+  cursor: zoom-in;
+}
+
+/*Make Sure that exist in product.css*/
+.productDetails .view::after {
+  position: absolute;
+  top: 0;
+  right: -80%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+.productDetails .view:hover::after {
+  animation: shine 1s;
+}
+
+.productDetails .productSlider .thumbs {
+  box-sizing: border-box;
+  max-height: 600px;
+}
+
+@media screen and (min-width: 992px) {
+  .productDetails .productSlider .thumbs {
+    flex: 1;
+  }
+}
+
+.productDetails .productSlider .thumbs .swiper-slide {
+  max-height: 120px;
+  aspect-ratio: 1;
+  opacity: 0.3;
+  filter: grayscale(1);
+}
+
+.productDetails .productSlider .thumbs .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+  filter: none;
+}
+
+.productDetails .productSlider .thumbs .swiper-slide img {
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+image .phoneView .swiper {
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+}
+
+.phoneView .swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 234px;
+  height: 507px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .phoneView .swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 234px;
+    height: 507px;
+    position: relative;
+  }
+}
+
+.phoneView .swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.phoneView .swiper-3d .swiper-slide-shadow-left {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.phoneView .swiper-3d .swiper-slide-shadow-right {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.phoneView .swiper .frame {
+  width: 270px;
+  height: 535px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 2;
+}
+
+.phoneView .swiper .frame {
+  width: 270px;
+  height: 535px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 2;
+
+  pointer-events: none;   /* <-- this is REQUIRED */
+}

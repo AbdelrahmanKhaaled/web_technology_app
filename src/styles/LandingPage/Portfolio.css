@@ -1,0 +1,14 @@
+.portfolio {
+  padding: 60px 12px 40px 12px;
+  background-color: var(--whiteColor);
+  z-index: 1;
+}
+
+.portfolio .swiper-wrapper {
+  padding: 40px 0;
+  height: unset;
+}
+
+.portfolio .swiper-wrapper .swiper-slide {
+  height: 100% !important;
+}
