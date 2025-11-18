@@ -10,7 +10,7 @@ import design from "../../assets/apps_icons/app_design.png";
 import android from "../../assets/apps_icons/app_android.png";
 import ios from "../../assets/apps_icons/app_ios.png";
 import web from "../../assets/apps_icons/app_web.png";
-import background from "../../assets/body-bg.png"
+import background from "../../assets/body-bg.png";
 
 const projects = [
   {
@@ -97,4 +97,5 @@ export default function our_products() {
     </section>
   );
 }
+
 
