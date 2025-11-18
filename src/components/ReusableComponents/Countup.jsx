@@ -1,11 +1,42 @@
-import React from "react";
+import { useState, useRef, useEffect } from "react";
 import CountUp from "react-countup";
 
 const Counter = ({ value }) => {
+  const [startCounter, setStartCounter] = useState(false);
+  const counterRef = useRef(null);
+
+  // const Wrapper = animate ? motion.div : "div";
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStartCounter(true);
+        }
+      },
+      { threshold: 0.3 } // better than 1.0
+    );
+
+    if (counterRef.current) observer.observe(counterRef.current);
+
+    return () => {
+      if (counterRef.current) observer.unobserve(counterRef.current);
+    };
+  }, []);
+
   return (
-    <div className="counter">
+    <div className="statistic" ref={counterRef}>
       <h2>
-        <CountUp start={0} end={value.end} duration={6} suffix={value.suffix}/>
+        {startCounter ? (
+          <CountUp
+            start={0}
+            end={value.end}
+            duration={6}
+            suffix={value.suffix}
+          />
+        ) : (
+          <h1 className="counterUp">0</h1>
+        )}
       </h2>
       <p>{value.label}</p>
     </div>
@@ -13,9 +44,6 @@ const Counter = ({ value }) => {
 };
 
 export default Counter;
-
-
-
 
 // import { useState, useRef, useEffect } from "react";
 // import CountUp from "react-countup";
@@ -70,7 +98,6 @@ export default Counter;
 //     </div>
 //   );
 // }
-
 
 // import { useState, useRef, useEffect } from "react";
 // import CountUp from "react-countup";
