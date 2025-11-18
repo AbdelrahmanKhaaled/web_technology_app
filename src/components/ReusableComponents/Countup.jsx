@@ -26,14 +26,6 @@ export default function Counter ({ value }) {
   return (
     <div className="statistic" ref={counterRef}>
       {startCounter ? (
-        <h1 className="counterUp">
-          <CountUp
-            start={0}
-            end={value?.end || 0}
-            duration={6}
-            suffix={value.suffix}
-          />
-        </h1>
       <CountUp start={0}
             end={value.end}
             duration={6}
@@ -161,6 +153,7 @@ export default function Counter ({ value }) {
 //   </div>
 //   );
 // }
+
 
 
 
