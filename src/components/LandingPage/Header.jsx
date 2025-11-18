@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
 import { useNavigate } from "react-router-dom";
+import logo from "/src/assets/new_logo.png";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
@@ -22,7 +23,7 @@ export default function Header() {
 
   const navigate = useNavigate();
 
-  const logo = "/src/assets/new_logo.png";
+  // const logo = "/src/assets/new_logo.png";
 
   const menuItems = [
     { name: t("headerHome"), link: "home", type: "section" },
@@ -153,3 +154,4 @@ export default function Header() {
     </header>
   );
 }
+
