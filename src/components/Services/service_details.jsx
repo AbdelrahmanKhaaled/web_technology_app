@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import background from "../../assets/body-bg.png";
 import icon from "../../assets/services_icons/icon1.png";
-import arrow_4 from "../../assets/arrow-4.png";
 import arrow_3 from "../../assets/arrow-3.png";
 
 export default function Service_Details() {
@@ -233,3 +232,4 @@ export default function Service_Details() {
     </content>
   );
 }
+
