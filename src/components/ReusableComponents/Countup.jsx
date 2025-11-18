@@ -33,6 +33,7 @@ const Counter = ({ value }) => {
             end={value.end}
             duration={6}
             suffix={value.suffix}
+            className="counterUp"
           />
         </h1>
       ) : (
