@@ -26,18 +26,18 @@ const Counter = ({ value }) => {
 
   return (
     <div className="statistic" ref={counterRef}>
-      <h2>
-        {startCounter ? (
+      {startCounter ? (
+        <h1>
           <CountUp
             start={0}
             end={value.end}
             duration={6}
             suffix={value.suffix}
           />
-        ) : (
-          <h1 className="counterUp">0</h1>
-        )}
-      </h2>
+        </h1>
+      ) : (
+        <h1 className="counterUp">0</h1>
+      )}
       <p>{value.label}</p>
     </div>
   );
