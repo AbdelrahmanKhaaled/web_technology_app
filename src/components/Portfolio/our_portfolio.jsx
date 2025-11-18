@@ -7,8 +7,7 @@ import Project from "../ReusableComponents/project";
 import { useTranslation } from "react-i18next";
 import image_cover from "../../assets/project/image_cover.png";
 import background from "../../assets/body-bg.png";
-import search from "../../assets/search.png";
-import arrow_4 from "../../assets/arrow-4.png";
+import search_icon from "../../assets/search.png";
 
 const projects = [
   {
@@ -139,7 +138,7 @@ export default function Our_Portfolio() {
                   onChange={(e) => setSearch(e.target.value)}
                 />
                 <button className="search-btn">
-                  <img src={search} alt="search icon"></img>
+                  <img src={search_icon} alt="search icon"></img>
                 </button>
               </motion.div>
 
@@ -322,3 +321,4 @@ export default function Our_Portfolio() {
     </section>
   );
 }
+
