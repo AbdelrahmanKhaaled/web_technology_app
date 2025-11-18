@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import CountUp from "react-countup";
+import "../../styles/ReusableComponents/Countup.css";
 
 const Counter = ({ value }) => {
   const [startCounter, setStartCounter] = useState(false);
@@ -157,3 +158,4 @@ export default Counter;
 //   </div>
 //   );
 // }
+
