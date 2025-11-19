@@ -319,80 +319,18 @@ header .inner .language:after {
 }
 /* #endregion Language Style */
 
-/* .popup {
-  position: fixed;
-  gap: 5px;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1055;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  display: none;
-}
-
-.popup.show {
-  opacity: 1;
-  display: block;
-}
-
-.lang {
-  background-color: var(--whiteColor);
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  padding: 20px;
-  border-radius: 20px;
-  position: fixed;
-  top: 0;
-  right: 50%;
-  transform: translateY(-100%);
-  transition: var(--transition);
-}
-
-.popup.show .lang {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.popup button {
-  color: black;
-  z-index: 222;
-  color: var(--darkColor);
-  text-align: center;
-  color: var(--darkColor) !important;
-  padding: 5px 10px;
-}
-
-.popup button:hover {
-  background: var(--linearGradient);
-  border-radius: 10px;
-  color: var(--whiteColor) !important;
-}
-
-.popup button:hover {
-  color: var(--whiteColor);
-} */
 
 /* Popup overlay */
 .popup {
   position: fixed;
-  gap: 5px;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 1055;
-
   background-color: rgba(0, 0, 0, 0);
-
   opacity: 0;
   pointer-events: none;
-
-  transition: opacity 0.4s ease;
 }
 
 /* When open */
@@ -407,27 +345,19 @@ header .inner .language:after {
   background-color: var(--whiteColor);
   display: flex;
   flex-direction: column;
-  width: fit-content;
   padding: 20px;
   border-radius: 20px;
-
   position: fixed;
-  right: 10%;
-
-  /* Start hidden above screen */
-  top: 10%;
-  transform: translateX(150%);
+  left: 0%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
   opacity: 0;
-
-  transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 /* Animate down when popup is shown */
 .popup.show .lang {
-  right: 10%;
-  transform: translateX(50%);
+  left: 50%;
   opacity: 1;
 }
 
