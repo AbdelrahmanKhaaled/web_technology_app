@@ -107,7 +107,7 @@ export default function Header() {
     <header>
       <section class={`inner ${isScrolled ? "scrolled" : ""}`}>
         {/* <!-- brand --> */}
-        <a class="navbar-brand" onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
+        <a class="navbar-brand" href="" onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
           <img loading="lazy" src={logo} alt="image"></img>
         </a>
         {/* <!-- navbar --> */}
@@ -179,5 +179,6 @@ export default function Header() {
     </header>
   );
 }
+
 
 
