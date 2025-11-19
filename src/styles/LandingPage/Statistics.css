@@ -2,7 +2,7 @@
     background-color: var(--whiteColor);
     z-index: 2;
     position: relative;
-    padding-bottom: 24px;
+    padding: 24px 0px;
 }
 
 .stats .container {
@@ -118,4 +118,5 @@
     transform: translate(50%, -50%) rotate(360deg);
   }
 }
+
 
