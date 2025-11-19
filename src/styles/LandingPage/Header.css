@@ -35,6 +35,7 @@ header .scrolled {
 header .inner .navbar-brand {
   margin-right: auto;
   padding: 8px;
+  cursor: pointer
 }
 
 header .inner .navbar-brand img {
@@ -124,6 +125,7 @@ header .inner .navbar .navbar-nav .logo {
   display: none;
   padding: 5px;
   margin-bottom: 20px;
+  cursor: pointer
 }
 
 @media screen and (max-width: 992px) {
@@ -372,4 +374,5 @@ header .inner .language:after {
   border-radius: 10px;
   color: var(--whiteColor) !important;
 }
+
 
