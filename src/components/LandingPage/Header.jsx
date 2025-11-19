@@ -162,7 +162,10 @@ export default function Header() {
         <a onClick={handleClickLang} class="language outlineGradient" href="#">
           <span>Language</span>
         </a>
-        <div class={`popup ${isLangShow ? "show" : ""}`}>
+        <div
+          className={`popup ${isLangShow ? "show" : ""}`}
+          onClick={() => setIsLangShow(false)}
+        >
           <div class="lang">
             <button onClick={() => changeLanguage("english")}>English</button>
             <button onClick={() => changeLanguage("german")}>German</button>
@@ -176,3 +179,4 @@ export default function Header() {
     </header>
   );
 }
+
