@@ -159,7 +159,7 @@ export default function Header() {
           <option value="italian">Italiano</option>
         </select> */}
 
-        <a onClick={handleClickLang} class="language outlineGradient" href="#">
+        <a onClick={handleClickLang} class="language outlineGradient" href="">
           <span>Language</span>
         </a>
         <div
@@ -179,6 +179,7 @@ export default function Header() {
     </header>
   );
 }
+
 
 
 
