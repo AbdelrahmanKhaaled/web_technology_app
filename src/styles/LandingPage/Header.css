@@ -261,7 +261,6 @@ header .inner .language {
 }
 
 header .inner .language span {
-  font-family: "fontBold";
   color: var(--darkColor);
 }
 
@@ -373,3 +372,4 @@ header .inner .language:after {
   border-radius: 10px;
   color: var(--whiteColor) !important;
 }
+
