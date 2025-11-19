@@ -107,7 +107,7 @@ export default function Header() {
     <header>
       <section class={`inner ${isScrolled ? "scrolled" : ""}`}>
         {/* <!-- brand --> */}
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
           <img loading="lazy" src={logo} alt="image"></img>
         </a>
         {/* <!-- navbar --> */}
@@ -122,7 +122,7 @@ export default function Header() {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class={`navbar-nav ${isNavShow ? "show" : ""}`}>
-            <a class="logo" href="">
+            <a class="logo"  onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
               <img loading="lazy" src={logo} alt="image"></img>
             </a>
             {menuItems.map((item, idx) => (
@@ -159,9 +159,9 @@ export default function Header() {
           <option value="italian">Italiano</option>
         </select> */}
 
-        <a onClick={handleClickLang} class="language outlineGradient" href="">
+        <button onClick={handleClickLang} class="language outlineGradient">
           <span>Language</span>
-        </a>
+        </button>
         <div
           className={`popup ${isLangShow ? "show" : ""}`}
           onClick={() => setIsLangShow(false)}
@@ -179,6 +179,7 @@ export default function Header() {
     </header>
   );
 }
+
 
 
 
