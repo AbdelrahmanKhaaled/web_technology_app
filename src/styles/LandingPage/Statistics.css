@@ -8,7 +8,6 @@
 .stats .container {
   position: relative;
   z-index: 4;
-  margin-top: -60px;
   background: var(--linearGradient);
   padding: 40px;
   border-radius: 20px;
@@ -119,3 +118,4 @@
     transform: translate(50%, -50%) rotate(360deg);
   }
 }
+
