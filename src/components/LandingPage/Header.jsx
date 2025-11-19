@@ -107,7 +107,7 @@ export default function Header() {
     <header>
       <section class={`inner ${isScrolled ? "scrolled" : ""}`}>
         {/* <!-- brand --> */}
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
           <img loading="lazy" src={logo} alt="image"></img>
         </a>
         {/* <!-- navbar --> */}
@@ -122,14 +122,14 @@ export default function Header() {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class={`navbar-nav ${isNavShow ? "show" : ""}`}>
-            <a class="logo" href="#" onClick={() => handleNavClick({name:"", link:"home", "section"}, 10)}>
+            <a class="logo" onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
               <img loading="lazy" src={logo} alt="image"></img>
             </a>
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
                 class={`navLink ${activeIndex === idx ? "active" : ""}`}
-                onClick={() => handleNavClick({name:"", link:"home", "section"}, 10)}
+                onClick={() => handleNavClick(item, idx)}
                 smooth={true}
                 to={`${item.link}`}
                 duration={500}
