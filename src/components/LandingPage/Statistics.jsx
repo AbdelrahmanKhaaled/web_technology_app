@@ -1,6 +1,4 @@
-// import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-// import CountUp from "react-countup";
 import "../../styles/LandingPage/Statistics.css";
 import Counter from "../ReusableComponents/Countup";
 import { useTranslation } from "react-i18next";
@@ -8,39 +6,12 @@ import { useTranslation } from "react-i18next";
 export default function Statistics() {
   const { t } = useTranslation();
 
-  // const [startCounter, setStartCounter] = useState(false);
-  // const counterRef = useRef(null);
-
-  // Detect when the counter is in view
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       const entry = entries[0];
-  //       if (entry.isIntersecting) {
-  //         setStartCounter(true);
-  //       }
-  //     },
-  //     { threshold: 0.5 }
-  //   );
-
-  //   if (counterRef.current) {
-  //     observer.observe(counterRef.current);
-  //   }
-
-  //   return () => {
-  //     if (counterRef.current) {
-  //       observer.unobserve(counterRef.current);
-  //     }
-  //   };
-  // }, []);
-
-  // 🔹 Reusable fade-up animation (same as AOS)
   const fadeUp = (delay = 0) => ({
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, delay: delay / 1000 }, // AOS uses ms, Framer uses sec
+      transition: { duration: 0.8, delay: delay / 1000 },
     },
   });
 
@@ -87,12 +58,6 @@ export default function Statistics() {
             { end: 256, label: t("statistic2"), delay: 150, suffix: " +" },
             { end: 36, label: t("statistic3"), delay: 200, suffix: " +" },
             { end: 17, label: t("statistic4"), delay: 250, suffix: " +" },
-            // {
-            //   end: 95,
-            //   label: "Customer satisfaction",
-            //   delay: 300,
-            //   suffix: " %",
-            // },
           ].map((item) => (
             <Counter value={item} animate={true} />
           ))}

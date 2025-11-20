@@ -1,16 +1,9 @@
 import "../../styles/Products/our_products.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import Product from "../ReusableComponents/product";
-import { useTranslation } from "react-i18next";
-import arrow from "../../assets/pageArrow.png";
 import product from "../../assets/product.png";
-import design from "../../assets/apps_icons/app_design.png";
 import android from "../../assets/apps_icons/app_android.png";
-import ios from "../../assets/apps_icons/app_ios.png";
-import web from "../../assets/apps_icons/app_web.png";
-import background from "../../assets/body-bg.png"
+import background from "../../assets/body-bg.png";
 
 const projects = [
   {
@@ -39,7 +32,6 @@ const links = {
 };
 
 export default function our_products() {
-  const { t } = useTranslation();
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
@@ -47,7 +39,7 @@ export default function our_products() {
     transition: {
       duration: 0.6,
       delay: delay / 1000,
-      ease: [0.42, 0, 0.58, 1], // smoother natural curve
+      ease: [0.42, 0, 0.58, 1],
     },
     viewport: { once: true, amount: 0.2 },
   });
@@ -55,10 +47,7 @@ export default function our_products() {
   return (
     <section className="o_products">
       <div class="container">
-        <img
-          src={background}
-          class="body-overlay"
-        ></img>
+        <img src={background} class="body-overlay"></img>
         <motion.section
           class="activeNavClass our_products"
           {...fadeUp(50)}
@@ -82,11 +71,12 @@ export default function our_products() {
             </div>
           </div>
         </motion.section>
+        {/* <Background_Component head={t("marketingHead")} content={t("marketingContent")}/> */}
         <section class="activeNavClass " id="ourProducts">
           <div class="container boot">
             <div class="row" id="products-container">
               {projects.map((item, idx) => (
-                <motion.div class="boot aos-init" {...fadeUp(50 * (idx + 1))}>
+                <motion.div class="boot" {...fadeUp(50 * (idx + 1))}>
                   <Product item={item} links={links} />
                 </motion.div>
               ))}

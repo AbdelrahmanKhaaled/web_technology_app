@@ -1,37 +1,19 @@
 import "../../styles/Portfolio/project_details.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-
 import image1 from "../../assets/project/image1.png";
 import image2 from "../../assets/project/image2.png";
 import android from "../../assets/apps_icons/app_android.png";
 import ios from "../../assets/apps_icons/app_ios.png";
 import frame from "../../assets/frame.png";
+import background from "../../assets/body-bg.png";
 
 export default function Project_Details() {
   const { t } = useTranslation();
 
-  const images = [
-    image1,
-    image2,
-    image1,
-    image2,
-    image1,
-    image2,
-  ];
+  const images = [image1, image2, image1, image2, image1, image2];
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
@@ -39,14 +21,14 @@ export default function Project_Details() {
     transition: {
       duration: 0.6,
       delay: delay / 1000,
-      ease: [0.42, 0, 0.58, 1], // smoother natural curve
+      ease: [0.42, 0, 0.58, 1],
     },
     viewport: { once: true, amount: 0.2 },
   });
 
   return (
     <div>
-      <div class="body-overlay"></div>
+      <img src={background} class="body-overlay"></img>
 
       <section class="banner">
         <div class="container">
@@ -69,9 +51,7 @@ export default function Project_Details() {
                   <a href="#!" class="title">
                     stadtli Kebab Pizza
                   </a>
-                  <p class="des">
-                    {t("projectDetailsContent")}
-                  </p>
+                  <p class="des">{t("projectDetailsContent")}</p>
                   <div class="workLinks">
                     <div class="workLinks">
                       <a
@@ -79,11 +59,7 @@ export default function Project_Details() {
                         class="link"
                         target="_balank"
                       >
-                        <img
-                          loading="lazy"
-                          src={ios}
-                          alt="image"
-                        ></img>
+                        <img loading="lazy" src={ios} alt="image"></img>
                         {t("projectDetailsIOS")}
                       </a>
                       <a
@@ -91,11 +67,7 @@ export default function Project_Details() {
                         class="link"
                         target="_balank"
                       >
-                        <img
-                          loading="lazy"
-                          src={android}
-                          alt="image"
-                        ></img>
+                        <img loading="lazy" src={android} alt="image"></img>
                         {t("projectDetailsAndroid")}
                       </a>
                     </div>

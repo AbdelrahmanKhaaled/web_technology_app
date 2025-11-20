@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "../../styles/LandingPage/Home.css";
 import Portfolio from "./Portfolio";
 import { useTranslation } from "react-i18next";
@@ -9,9 +9,23 @@ import instagram from "../../assets/social_icons/instagram.png";
 import snapshat from "../../assets/social_icons/snapchat.png";
 import portfolio from "../../assets/portfolio.png";
 import products from "../../assets/products.png";
-
+import Social from "../ReusableComponents/social";
 export default function Home() {
   const { t } = useTranslation();
+
+  const [showForm, setShowForm] = useState(false);
+
+  const showFormFun = () => {
+    setShowForm(!showForm);
+  };
+
+  const icons = [
+    { name: "facebook", src: facebook },
+    { name: "linkedin", src: linkedin },
+    { name: "x", src: x },
+    { name: "instagram", src: instagram },
+    { name: "snapshat", src: snapshat },
+  ];
 
   return (
     <section class="activeNavClass home" id="home">
@@ -26,26 +40,9 @@ export default function Home() {
           <p>{t("homeContent")}</p>
         </h5>
         <div class="social">
-          <a href="#">
-            <img loading="lazy" src={facebook} alt="facebook"></img>
-          </a>
-          <a href="#">
-            <img
-              loading="lazy"
-              src={linkedin}
-              class="mb-1"
-              alt="linkedin"
-            ></img>
-          </a>
-          <a href="#">
-            <img loading="lazy" src={x} alt="call"></img>
-          </a>
-          <a href="#">
-            <img loading="lazy" src={instagram} alt="call"></img>
-          </a>
-          <a href="#">
-            <img loading="lazy" src={snapshat} alt="call"></img>
-          </a>
+          {icons.map((item) => (
+            <Social loading="lazy" item={item} />
+          ))}
         </div>
         <div class="btns">
           <a href="/portfolio" class="customBtn">
@@ -58,18 +55,19 @@ export default function Home() {
               class="requestDemo"
               data-bs-toggle="modal"
               data-bs-target="#requestQuotation"
+              onClick={setShowForm}
             >
               {t("homeRequest")}
             </a>
           </div>
-          {/* <a href="/products" class="customBtn">
+          <a href="/products" class="customBtn">
             <img
               loading="lazy"
               src={products}
               alt="image"
             ></img>
             <span> Our products </span>
-          </a> */}
+          </a>
         </div>
       </div>
     </section>

@@ -5,7 +5,6 @@ import Counter from "../ReusableComponents/Countup";
 import { useTranslation } from "react-i18next";
 
 export default function Aboutus() {
-  // const counterRef = useRef(null);
   const { t } = useTranslation();
 
   const item = { end: 2017, label: t("aboutEstablishment"), suffix: "" };
@@ -46,22 +45,6 @@ export default function Aboutus() {
     <section class="activeNavClass aboutPage" id="about">
       <div class="container">
         <section class="row">
-          {/* <div class="img-content">
-            <div class="lazyImg">
-              <div class="lazyDiv loaded">
-                <div class="simpleParallax simple-parallax-initialized">
-                  <img
-                    loading="lazy"
-                    class="lazy parallax"
-                    data-src="#"
-                    alt="image"
-                    src="#"
-                    data-loaded="true"
-                  ></img>
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div class="img-content">
             <div class="info">
               <motion.h4 class="sectionTitle" {...fadeUp(50)}>
@@ -83,10 +66,9 @@ export default function Aboutus() {
                   })}
                 </div>
               </h1>
-              <motion.p class="des" {...fadeUp(50)}>
+              <motion.p class="des" {...fadeUp(100)}>
                 {t("aboutContent")}
               </motion.p>
-              {/* <Download value={"company"} /> */}
               <Counter value={item} animate={false} />
             </div>
           </div>

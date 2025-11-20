@@ -1,0 +1,29 @@
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--mainColor);
+  background-color: transparent;
+  transition: var(--transition);
+}
+
+.social a:hover {
+  transform: translateY(-4px);
+  background-color: var(--mainColor);
+}
+
+.social a img {
+  height: 16px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  transition: var(--transition);
+  filter: var(--Filter);
+
+}
+
+.social a:hover img {
+  filter: brightness(0) invert(1);
+}

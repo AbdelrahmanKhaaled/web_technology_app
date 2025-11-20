@@ -82,24 +82,8 @@
   animation: subHide 0.5s forwards;
 }
 
-/*Problem becuase show subHide not subMove*/
 .serviceArea .allServices .serviceItem:hover .serviceList {
   animation: subMove 0.5s forwards;
-}
-
-.serviceArea .allServices .serviceItem .serviceList span {
-  min-width: calc(50% - 8px);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: var(--darkColor);
-  opacity: 1; /*it has to make it opacity:0*/
-  text-align: start;
-  filter: brightness(0.8);
-}
-
-.serviceArea .allServices .serviceItem .serviceList span img {
-  filter: var(--Filter);
 }
 
 .serviceArea .allServices .serviceItem .more {

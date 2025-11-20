@@ -1,9 +1,5 @@
 .serviceArea {
   background:
-    /* linear-gradient(
-      rgba(0, 159, 111, 0.768627451),
-      rgba(0, 159, 111, 0.7960784314)
-    ), */
     linear-gradient(rgba(182, 20, 28, 0.8), rgba(182, 20, 28, 0.8)),
     url("../../assets/services_icons/back_services.jpg");
   background-size: 300%;
@@ -57,33 +53,4 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-}
-
-.h3,
-h3 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-
-@media (min-width: 1200px) {
-  h3 {
-    font-size: 1.75rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  h3 {
-    font-size: 20px;
-  }
-}
-
-@keyframes animateBg {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
 }

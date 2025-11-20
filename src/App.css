@@ -68,6 +68,23 @@ img, svg {
   margin-top: 0;
 }
 
+.h3,
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
 h6 {
   font-size: 1rem;
 }

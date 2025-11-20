@@ -127,14 +127,13 @@ export default function Services() {
     },
   ];
 
-  // Reusable fade-up animation (identical logic to VisionSection)
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
     transition: {
       duration: 0.4,
       delay: delay / 1000,
-      ease: [0.42, 0, 0.58, 1], // smoother natural curve
+      ease: [0.42, 0, 0.58, 1],
     },
     viewport: { once: true, amount: 0.2 },
   });

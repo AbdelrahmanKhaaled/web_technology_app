@@ -1,0 +1,77 @@
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+  width: min(100% - 24px, 1320px);
+  margin: 140px auto 40px;
+  padding: 40px 0;
+  gap: 16px;
+  justify-content: center;
+  background: var(--linearGradient);
+  background-size: 400%;
+  animation: animateBg 5s linear infinite;
+  border-radius: 16px;
+  color: var(--whiteColor);
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    margin: 120px auto 20px;
+  }
+}
+
+.hero .shapes {
+  top: 0;
+  left: unset;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.hero:hover .shapes span:nth-child(1) {
+  width: 90%;
+}
+
+.hero:hover .shapes span:nth-child(2) {
+  width: 60%;
+}
+
+.hero:hover .shapes span:nth-child(3) {
+  width: 35%;
+}
+
+.hero .text {
+  padding: 24px;
+  width: min(100% - 32px, 800px);
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  text-align: center;
+  color: var(--whiteColor);
+  margin: auto;
+}
+
+.hero .text {
+  padding: 24px;
+  width: min(100% - 32px, 800px);
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero .text .title {
+  font-weight: bold;
+  font-size: 40px;
+  text-wrap: balance;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero .text .des {
+  text-wrap: balance;
+  font-size: 16px;
+  font-weight: normal;
+}

@@ -1,7 +1,4 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
-// import "./ClothesPage.css";
-import "../../styles/LandingPage/Careers.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import background from "../../assets/body-bg.png";
@@ -17,7 +14,7 @@ export default function Faq() {
     transition: {
       duration: 0.6,
       delay: delay / 1000,
-      ease: [0.42, 0, 0.58, 1], // smoother natural curve
+      ease: [0.42, 0, 0.58, 1],
     },
     viewport: { once: true, amount: 0.2 },
   });
@@ -25,10 +22,9 @@ export default function Faq() {
   return (
     <content>
       <img src={background} class="body-overlay"></img>
-
       <section class="faqSection activeNavClass" id="faq">
         <div class="container">
-          <section class="hero aos-init aos-animate" data-aos="fade-up">
+          <motion.section {...fadeUp(100)} class="hero">
             <div class="shapes">
               <span></span>
               <span></span>
@@ -38,7 +34,7 @@ export default function Faq() {
               <h1 class="title animate_words">{t("faqDetailsHead")}</h1>
               <h6 class="des animate_words">{t("faqDetailsContent")}</h6>
             </div>
-          </section>
+          </motion.section>
           <motion.div className="faq-item" {...fadeUp(200)}>
             <div className="faq-question" onClick={() => setOpen(!open)}>
               <h3 className={`${open ? "Colored" : ""}`}>{t("faqQuestion")}</h3>

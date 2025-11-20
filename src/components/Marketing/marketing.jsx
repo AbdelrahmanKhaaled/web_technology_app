@@ -1,6 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import React from "react";
 import "../../styles/Marketing/marketing.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -10,6 +7,8 @@ import saudi from "../../assets/marketing/saudi.png";
 import logo from "../../assets/new_logo.png";
 import whatsapp from "../../assets/marketing/whatsapp.png";
 import mailbox from "../../assets/marketing/mailbox.png";
+import Background_Component from "../ReusableComponents/background_component";
+import background from "../../assets/body-bg.png";
 
 export default function Marketing() {
   const { t } = useTranslation();
@@ -20,30 +19,15 @@ export default function Marketing() {
     transition: {
       duration: 0.6,
       delay: delay / 1000,
-      ease: [0.42, 0, 0.58, 1], // smoother natural curve
+      ease: [0.42, 0, 0.58, 1],
     },
     viewport: { once: true, amount: 0.2 },
   });
 
   return (
     <content>
-      <div class="body-overlay"></div>
-
-      <motion.section class="hero" {...fadeUp(0)}>
-        <div class="shapes">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="text">
-          <motion.h1 class="title animate_words" {...fadeUp(50)}>
-            {t("marketingHead")}
-          </motion.h1>
-          <motion.h6 class="des animate_words" {...fadeUp(100)}>
-            {t("marketingContent")}
-          </motion.h6>
-        </div>
-      </motion.section>
+      <img src={background} class="body-overlay"></img>
+      <Background_Component head={t("marketingHead")} content={t("marketingContent")}/>
 
       <section class="activeNavClass marketing" id="marketing">
         <div class="container">
@@ -129,15 +113,15 @@ export default function Marketing() {
       </section>
       <section class="howToBeMarketer mbFooter">
         <div class="container">
-          <motion.p class="hint aos-init aos-animate" {...fadeUp(50)}>
+          <motion.p class="hint" {...fadeUp(50)}>
             {t("marketingPartner1")}
           </motion.p>
-          <motion.h2 class="title aos-init aos-animate" {...fadeUp(100)}>
+          <motion.h2 class="title" {...fadeUp(100)}>
             {t("marketingPartner2")}
           </motion.h2>
           <div class="timeLine ">
             <motion.div
-              class="timeLineItem aos-init aos-animate"
+              class="timeLineItem"
               {...fadeUp(150)}
             >
               <img
@@ -152,7 +136,7 @@ export default function Marketing() {
               </p>
             </motion.div>
             <motion.div
-              class="timeLineItem aos-init aos-animate"
+              class="timeLineItem"
               {...fadeUp(200)}
             >
               <img

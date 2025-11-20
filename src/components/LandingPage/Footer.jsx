@@ -1,6 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import "./ClothesPage.css";
 import "../../styles/LandingPage/Footer.css";
 import { useTranslation } from "react-i18next";
 
@@ -11,8 +8,17 @@ import x from "../../assets/social_icons/x.png";
 import instagram from "../../assets/social_icons/instagram.png";
 import snapshat from "../../assets/social_icons/snapchat.png";
 import logo from "../../assets/new_logo.png";
+import Social from "../ReusableComponents/social";
 
 export default function Footer() {
+  const icons = [
+    { name: "facebook", src: facebook },
+    { name: "linkedin", src: linkedin },
+    { name: "x", src: x },
+    { name: "instagram", src: instagram },
+    { name: "snapshat", src: snapshat },
+  ];
+
   const { t } = useTranslation();
 
   return (
@@ -21,12 +27,7 @@ export default function Footer() {
         <div class="row">
           <div class="col-12 col-lg-3 p-3 ">
             <a href="#">
-              <img
-                loading="lazy"
-                class="logo"
-                alt="image"
-                src={logo}
-              ></img>
+              <img loading="lazy" class="logo" alt="image" src={logo}></img>
             </a>
             <p class="info">{t("footerContent")}</p>
             <p></p>
@@ -117,26 +118,9 @@ export default function Footer() {
         <div class="copywriting">
           <p class="hint">© 2025 {t("footerCopyRight")}</p>
           <div class="social">
-            <a href="#" target="_blank">
-              <img loading="lazy" src={facebook} alt="facebook"></img>
-            </a>
-            <a href="#" target="_blank">
-              <img
-                loading="lazy"
-                src={linkedin}
-                class="mb-1"
-                alt="linkedin"
-              ></img>
-            </a>
-            <a href="#" target="_blank">
-              <img loading="lazy" src={x} alt="call"></img>
-            </a>
-            <a href="#" target="_blank">
-              <img loading="lazy" src={instagram} alt="call"></img>
-            </a>
-            <a href="#" target="_blank">
-              <img loading="lazy" src={snapshat} alt="call"></img>
-            </a>
+            {icons.map((item) => (
+              <Social loading="lazy" item={item} />
+            ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
-// import "./ClothesPage.css";
 import "../../styles/LandingPage/Contact.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -53,8 +51,6 @@ export default function Contact() {
               <input
                 type="hidden"
                 name="_token"
-                value="HYuBd7ZiOT7172YNBPLP9ezS09NGFLZBs7inXnF3"
-                autocomplete="off"
               ></input>
               <div class="form-group">
                 <div class="inputfield has-error">

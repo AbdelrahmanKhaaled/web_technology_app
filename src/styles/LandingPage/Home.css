@@ -2,7 +2,7 @@
   padding: 200px 0 100px;
   position: relative;
   z-index: 2;
-  min-height: 60dvh;
+  min-height: 60dvh;    
 }
 
 @media screen and (max-width: 768px) {
@@ -34,7 +34,7 @@
   top: 0;
   right: 0%;
   box-shadow: 0px 0px 25vw 25vw rgba(233, 32, 42, 0.3019607843);
-  
+
   z-index: -2;
   opacity: 0.6;
 }
@@ -49,12 +49,17 @@
   pointer-events: none;
   display: flex;
   justify-content: space-around;
+  z-index: -2;
 }
 
 .home .lines span {
   width: 1px;
   height: 100%;
-  background: linear-gradient(to bottom, var(--mainColor20) 0%, transparent 100%);;
+  background: linear-gradient(
+    to bottom,
+    var(--mainColor20) 0%,
+    transparent 100%
+  );
   position: relative;
 }
 
@@ -177,36 +182,6 @@
   justify-content: center;
 }
 
-.home .content .social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--mainColor);
-  background-color: transparent;
-  transition: var(--transition);
-}
-
-.home .content .social a:hover {
-  transform: translateY(-4px);
-  background-color: var(--mainColor);
-}
-
-.home .content .social a img {
-  height: 16px;
-  -o-object-fit: contain;
-  object-fit: contain;
-  transition: var(--transition);
-  filter: var(--Filter);
-
-}
-
-.home .content .social a:hover img {
-  filter: brightness(0) invert(1);
-}
-
 .home .content .btns {
   width: 100%;
   display: flex;
@@ -280,29 +255,6 @@
   outline: 4px solid rgba(233, 32, 42, 0.1882352941);
   box-shadow: 0 0 0 8px rgba(233, 32, 42, 0.1882352941);
   margin: 8px 0;
-}
-
-.my-gradient {
-  background: linear-gradient(45deg, #11b14e 0%, #38c684 50%, #009f6f 100%);
-  color: white;
-}
-
-.btn-primary {
-  background: linear-gradient(45deg, #11b14e 0%, #38c684 50%, #009f6f 100%);
-  color: white;
-  border: none;
-  padding: 12px 40px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.3s;
-  background: linear-gradient(45deg, #11b14e, #38c684, #009f6f);
-  background-size: 300% 300%;
-  animation: gradientMove 10s ease infinite;
-  color: white;
-}
-
-.btn-primary:hover {
-  filter: brightness(1.1);
 }
 
 /* Animation keyframes */

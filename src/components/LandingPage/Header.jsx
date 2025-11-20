@@ -1,25 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 import "../../styles/LandingPage/Header.css";
-
 import { Link } from "react-scroll";
-
 import { useTranslation } from "react-i18next";
-
 import { useNavigate } from "react-router-dom";
-
 import logo from "../../assets/new_logo.png";
+import Header_Item from "../ReusableComponents/header_item";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
 
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng);
-  //   // document.dir = lng === "ar" ? "rtl" : "ltr"; // 👈 handle direction
-  // };
-
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    localStorage.setItem("lang", lang); // optional – remember user choice
+    localStorage.setItem("lang", lang);
     setIsLangShow(false);
   };
 
@@ -79,6 +71,7 @@ export default function Header() {
   // Handle navigation logic
   const handleNavClick = (item, idx) => {
     setActiveIndex(idx);
+    setIsNavShow(false);
 
     if (item.type === "page") {
       // Navigate to another page (clean path, no #)
@@ -107,58 +100,43 @@ export default function Header() {
     <header>
       <section class={`inner ${isScrolled ? "scrolled" : ""}`}>
         {/* <!-- brand --> */}
-        <a class="navbar-brand" onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
+        <a
+          class="navbar-brand"
+          onClick={() =>
+            handleNavClick({ name: "", link: "home", type: "section" }, 10)
+          }
+        >
           <img loading="lazy" src={logo} alt="image"></img>
         </a>
         {/* <!-- navbar --> */}
         <nav class="navbar navbar-expand-lg">
-          <button
-            ref={menuRef}
-            class="navbar-toggler"
-            onClick={() => handleClickNav()}
-          >
+          <button ref={menuRef} class="navbar-toggler" onClick={handleClickNav}>
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class={`navbar-nav ${isNavShow ? "show" : ""}`}>
-            <a class="logo"  onClick={() => handleNavClick({name:"", link:"home", type: "section"}, 10)}>
+          <div
+            class={`navbar-nav ${isNavShow ? "show" : ""}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <a
+              class="logo"
+              onClick={() =>
+                handleNavClick({ name: "", link: "home", type: "section" }, 10)
+              }
+            >
               <img loading="lazy" src={logo} alt="image"></img>
             </a>
             {menuItems.map((item, idx) => (
-              <Link
-                key={idx}
-                class={`navLink ${activeIndex === idx ? "active" : ""}`}
-                onClick={() => handleNavClick(item, idx)}
-                smooth={true}
-                to={`${item.link}`}
-                duration={500}
-              >
-                {item.name}
-              </Link>
+              <Header_Item
+                handleNavClick={handleNavClick}
+                item={item}
+                idx={idx}
+                activeIndex={activeIndex}
+              />
             ))}
           </div>
         </nav>
-        {/* <select
-            onChange={(e) => changeLanguage(e.target.value)}
-            defaultValue={i18n.language}
-            className="lang-dropdown"
-          >
-            <option value="english">English</option>
-            <option value="german">German</option>
-            <option value="italian">Italiano</option>
-          </select> */}
-
-        {/* <select
-          onChange={(e) => changeLanguage(e.target.value)}
-          defaultValue={i18n.language}
-          className="lang-dropdown outlineGradient-select"
-        >
-          <option value="english">English</option>
-          <option value="german">German</option>
-          <option value="italian">Italiano</option>
-        </select> */}
-
         <button onClick={handleClickLang} class="language outlineGradient">
           <span>Language</span>
         </button>
@@ -166,22 +144,13 @@ export default function Header() {
           className={`popup ${isLangShow ? "show" : ""}`}
           onClick={() => setIsLangShow(false)}
         >
-          <div class="lang">
+          <div class="lang" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => changeLanguage("english")}>English</button>
             <button onClick={() => changeLanguage("german")}>German</button>
             <button onClick={() => changeLanguage("italian")}>Italian</button>
           </div>
         </div>
-        {/* <button onClick={() => changeLanguage("english")}>En</button>
-        <button onClick={() => changeLanguage("german")}>Du</button>
-        <button onClick={() => changeLanguage("italian")}>It</button> */}
       </section>
     </header>
   );
 }
-
-
-
-
-
-

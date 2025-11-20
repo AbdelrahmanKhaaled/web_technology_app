@@ -7,6 +7,7 @@ header {
   z-index: 1024;
   transition: var(--transition);
   padding: 12px;
+  
 }
 
 header .inner {
@@ -144,78 +145,7 @@ header .inner .navbar .logo img {
   -o-object-position: left;
   object-position: left;
 }
-
-header .inner .navbar .navbar-nav .navLink {
-  flex: 1;
-  white-space: nowrap;
-  padding: 8px 16px;
-  color: var(--darkColor);
-  transition: var(--transition);
-  border-radius: 16px;
-  position: relative;
-  isolation: isolate;
-  cursor: pointer;
-  font-family: var(--fontFamilyOne);
-}
-
-@media screen and (max-width: 992px) {
-  header .inner .navbar .navbar-nav .navLink {
-    flex: unset;
-    border-radius: 12px;
-  }
-}
-
-header .inner .navbar .navbar-nav .navLink.active {
-  color: var(--whiteColor);
-}
-
-@media screen and (max-width: 992px) {
-  header .inner .navbar .navbar-nav .navLink.active {
-    color: var(--whiteColor);
-    background: var(--linearGradient);
-    background-size: 400%;
-    animation: animateBg 5s linear infinite;
-  }
-}
-
-header .inner .navbar .navbar-nav .navLink::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: var(--linearGradient);
-  background-size: 400%;
-  animation: animateBg 5s linear infinite;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition);
-  transform: translateX(-100%);
-  border-radius: 30%;
-  -webkit-clip-path: polygon(
-    15% 0%,
-    85% 0%,
-    102% 50%,
-    85% 100%,
-    15% 100%,
-    -2% 50%
-  );
-  clip-path: polygon(15% 0%, 85% 0%, 102% 50%, 85% 100%, 15% 100%, -2% 50%);
-}
-
-header .inner .navbar .navbar-nav .navLink.active::before {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0%);
-}
-
-@media screen and (max-width: 992px) {
-  header .inner .navbar .navbar-nav .navLink::before {
-    display: none;
-  }
-}
+ 
 /* #endregion Navbar Style */
 
 /* #Region Language Style */
@@ -374,5 +304,3 @@ header .inner .language:after {
   border-radius: 10px;
   color: var(--whiteColor) !important;
 }
-
-

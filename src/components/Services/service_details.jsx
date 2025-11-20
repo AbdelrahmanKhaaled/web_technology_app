@@ -4,10 +4,19 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import background from "../../assets/body-bg.png";
 import icon from "../../assets/services_icons/icon1.png";
-import arrow_3 from "../../assets/arrow-3.png";
+import Service_Line from "../ReusableComponents/service_line";
+import Order_Form from "../ReusableComponents/order_form";
 
 export default function Service_Details() {
   const { t } = useTranslation();
+
+  const serviceList = [
+    t("serviceDetailsList1"),
+    t("serviceDetailsList2"),
+    t("serviceDetailsList3"),
+    t("serviceDetailsList4"),
+    t("serviceDetailsList5"),
+  ];
 
   const [showForm, setShowForm] = useState(false);
 
@@ -28,10 +37,7 @@ export default function Service_Details() {
 
   return (
     <content class="service">
-      <img
-        src={background}
-        class="body-overlay"
-      ></img>
+      <img src={background} class="body-overlay"></img>
 
       <section class="banner">
         <div class="container">
@@ -39,7 +45,7 @@ export default function Service_Details() {
             <a href="#home">{t("headerHome")}</a>
             <a href="#services">{t("headerServices")}</a>
             <a href="!#" class="active">
-             {t("service1")}
+              {t("service1")}
             </a>
           </div>
         </div>
@@ -56,11 +62,11 @@ export default function Service_Details() {
                     src={icon}
                     alt="servicesIcon"
                   ></img>
-                  <motion.h4 class="title aos-init" {...fadeUp(100)}>
+                  <motion.h4 class="title" {...fadeUp(100)}>
                     {" "}
                     {t("service1")}{" "}
                   </motion.h4>
-                  <motion.p class="des aos-init" {...fadeUp(150)}>
+                  <motion.p class="des" {...fadeUp(150)}>
                     {t("serviceContent")}
                   </motion.p>
                 </div>
@@ -70,46 +76,9 @@ export default function Service_Details() {
               <motion.div class="productBox" {...fadeUp(200)}>
                 <h4 class="title"> {t("serviceDetailsRightHead")} </h4>
                 <div class="serviceList">
-                  <span>
-                    <img
-                      loading="lazy"
-                      src={arrow_3}
-                      alt="Icon"
-                    ></img>
-                    {t("serviceDetailsList1")}
-                  </span>
-                  <span>
-                    <img
-                      loading="lazy"
-                      src={arrow_3}
-                      alt="Icon"
-                    ></img>
-                    {t("serviceDetailsList2")}
-                  </span>
-                  <span>
-                    <img
-                      loading="lazy"
-                      src={arrow_3}
-                      alt="Icon"
-                    ></img>
-                    {t("serviceDetailsList3")}
-                  </span>
-                  <span>
-                    <img
-                      loading="lazy"
-                      src={arrow_3}
-                      alt="Icon"
-                    ></img>
-                    {t("serviceDetailsList4")}
-                  </span>
-                  <span>
-                    <img
-                      loading="lazy"
-                      src={arrow_3}
-                      alt="Icon"
-                    ></img>
-                    {t("serviceDetailsList5")}
-                  </span>
+                  {serviceList.map((item) => (
+                    <Service_Line item={item} />
+                  ))}
                 </div>
                 <div class="requestDemo position-relative top-0">
                   <motion.button
@@ -128,107 +97,7 @@ export default function Service_Details() {
           </div>
         </div>
       </section>
-      <div
-        class={`modal fade modalOpenClose ${showForm ? "show" : ""}`}
-        id="workDetails"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <button
-              type="button"
-              class="btnClose"
-              data-bs-dismiss="modal"
-              onClick={showFormFun}
-            >
-              X
-            </button>
-            <div class="modal-body p-0">
-              <form
-                class="form from-submit-global has-validation-callback"
-                id="myServiceForm"
-                action="#"
-                method="POST"
-              >
-                <input
-                  type="hidden"
-                  name="_token"
-                  value="RjmjOxeOOMaSXqOhMP23Jfm003ByP6LJScNEIGaj"
-                  autocomplete="off"
-                ></input>{" "}
-                <div class="form-group">
-                  <label for="name">
-                    {" "}
-                    {t("contactForm1")}<span>*</span>
-                  </label>
-                  <input
-                    type="text"
-                    data-validation="required"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                  ></input>
-                </div>
-                <div class="form-group">
-                  <label for="email">
-                    {" "}
-                    {t("contactForm2")}<span>*</span>
-                  </label>
-                  <input
-                    type="email"
-                    data-validation="required"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                  ></input>
-                </div>
-                <div class="form-group">
-                  <label for="phone">
-                    {" "}
-                    {t("contactForm3")}<span>*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    data-validation="required"
-                    class="form-control"
-                    id="phone"
-                    name="phone"
-                  ></input>
-                </div>
-                <div class="form-group">
-                  <label for="service_id">
-                    {" "}
-                    {t("serviceDetailsForm1")}<span>*</span>
-                  </label>
-                  <select
-                    name="service_id"
-                    data-validation="required"
-                    id="service"
-                    class="form-select"
-                  >
-                    <option value="6">{t("serviceDetailsFormList1")}</option>
-                    <option value="5">{t("serviceDetailsFormList2")}</option>
-                    <option value="4">{t("serviceDetailsFormList3")}</option>
-                    <option value="3">{t("serviceDetailsFormList4")}</option>
-                    <option value="2">{t("serviceDetailsFormList5")}</option>
-                    <option value="1" selected="">
-                      {t("serviceDetailsFormList6")}
-                    </option>
-                  </select>
-                </div>
-                <button
-                  type="submit"
-                  id="SubmitServiceForm"
-                  class="outlineGradient"
-                >
-                  <span>{t("contactForm6")}</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Order_Form showForm={showForm} showFormFun={showFormFun} selection={"service"}/>
     </content>
   );
 }

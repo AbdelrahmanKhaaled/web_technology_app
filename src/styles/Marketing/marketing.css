@@ -2,55 +2,7 @@ content {
   min-height: calc(100dvh - 660px);
   display: flex;
   flex-direction: column;
-}
-
-.hero {
-  position: relative;
-  z-index: 4;
-  margin-top: 100px;
-  background: var(--linearGradient);
-  padding: 40px;
-  border-radius: 20px;
-  animation: animateBg 5s linear infinite;
-  background-size: 400%;
-  overflow: hidden;
-  /* width: 80%; */
-  width: min(100% - 4px, 1320px);
-  margin: 150px auto 50px;
-  /* margin: 100px; */
-}
-
-.hero .shapes {
-  top: 0;
-  left: unset;
-  right: 0;
-  transform: translate(50%, -50%);
-}
-
-.hero .text {
-  padding: 24px;
-  width: min(100% - 32px, 800px);
-  display: flex;
-  gap: 24px;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
-  color: var(--whiteColor);
-}
-
-.hero .text .title {
-  font-weight: bold;
-  /* font-family: "fontBold", sans-serif; */
-  font-size: 40px;
-  /* text-wrap: balance; */
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.hero .text .des {
-  text-wrap: balance;
-  font-size: 15px;
-  font-weight: normal;
+  overflow-x: hidden;
 }
 
 .marketing {

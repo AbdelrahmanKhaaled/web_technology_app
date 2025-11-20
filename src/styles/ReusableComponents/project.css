@@ -47,7 +47,6 @@
 .portfolioItem .content .top {
   display: flex;
   align-items: baseline;
-  /* justify-content: space-between; */
 }
 
 .portfolioItem .content .top .title {

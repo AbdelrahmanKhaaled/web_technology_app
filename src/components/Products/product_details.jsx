@@ -1,14 +1,13 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 import "../../styles/Products/product_details.css";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 import image_cover from "../../assets/project/image_cover.png";
 import web from "../../assets/apps_icons/app_web.png";
 import design from "../../assets/apps_icons/app_design.png";
+import Order_Form from "../ReusableComponents/order_form";
+import background from "../../assets/body-bg.png";
 
 export default function Product_Details() {
-  const { t } = useTranslation();
 
   const [showForm, setShowForm] = useState(false);
 
@@ -22,14 +21,14 @@ export default function Product_Details() {
     transition: {
       duration: 0.6,
       delay: delay / 1000,
-      ease: [0.42, 0, 0.58, 1], // smoother natural curve
+      ease: [0.42, 0, 0.58, 1],
     },
     viewport: { once: true, amount: 0.2 },
   });
 
   return (
     <content class="product">
-      <div class="body-overlay"></div>
+      <img src={background} class="body-overlay"></img>
 
       <section class="banner">
         <div class="container">
@@ -187,141 +186,7 @@ export default function Product_Details() {
           </div>
         </div>
       </section>
-
-      <div
-        class={`modal fade modalOpenClose ${showForm ? "show" : ""}`}
-        id="workDetails"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog   modal-dialog-centered">
-          <div class="modal-content">
-            <button
-              type="button"
-              class="btnClose"
-              data-bs-dismiss="modal"
-              onClick={showFormFun}
-            >
-              X
-            </button>
-            <div class="modal-body p-0">
-              <form
-                class="form from-submit-global has-validation-callback"
-                id="myServiceForm"
-                action="#"
-                method="POST"
-              >
-                <input
-                  type="hidden"
-                  name="_token"
-                  value="RjmjOxeOOMaSXqOhMP23Jfm003ByP6LJScNEIGaj"
-                  autocomplete="off"
-                ></input>{" "}
-                <div class="form-group">
-                  <label for="name">
-                    {" "}
-                    Name <span>*</span>
-                  </label>
-                  <input
-                    type="text"
-                    data-validation="required"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                  ></input>
-                </div>
-                <div class="form-group">
-                  <label for="email">
-                    {" "}
-                    Email <span>*</span>
-                  </label>
-                  <input
-                    type="email"
-                    data-validation="required"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                  ></input>
-                </div>
-                <div class="form-group">
-                  <label for="phone">
-                    {" "}
-                    Phone <span>*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    data-validation="required"
-                    class="form-control"
-                    id="phone"
-                    name="phone"
-                  ></input>
-                </div>
-                <div class="form-group">
-                  <label for="service_id">
-                    {" "}
-                    Service <span>*</span>
-                  </label>
-                  <select
-                    name="service_id"
-                    data-validation="required"
-                    id="service"
-                    class="form-select"
-                  >
-                    <option value="6">Design services</option>
-                    <option value="5">Cloud services</option>
-                    <option value="4">Technical consulting</option>
-                    <option value="3">Digital marketing</option>
-                    <option value="2">Mobile application development</option>
-                    <option value="1" selected="">
-                      Website development
-                    </option>
-                  </select>
-                </div>
-                <div class="from-group">
-                  <script
-                    src="https://www.google.com/recaptcha/api.js?hl=en"
-                    async=""
-                    defer=""
-                  ></script>
-
-                  <div
-                    data-sitekey="6Lf1pxYrAAAAAGwqQ7jl8Hf3bCKNqBfsXRivC9Gs"
-                    class="g-recaptcha"
-                  >
-                    <div>
-                      <div>
-                        <iframe
-                          title="reCAPTCHA"
-                          width="304"
-                          height="78"
-                          role="presentation"
-                          name="a-u0qt4eoe3ye7"
-                          frameborder="0"
-                          scrolling="no"
-                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                          src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf1pxYrAAAAAGwqQ7jl8Hf3bCKNqBfsXRivC9Gs&amp;co=aHR0cHM6Ly9uYW1pLXRlYy5jb206NDQz&amp;hl=en&amp;v=TkacYOdEJbdB_JjX802TMer9&amp;size=normal&amp;anchor-ms=120000&amp;execute-ms=15000&amp;cb=7z0f5c30vuyg"
-                        ></iframe>
-                      </div>
-                      <textarea
-                        id="g-recaptcha-response"
-                        name="g-recaptcha-response"
-                        class="g-recaptcha-response"
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  id="SubmitServiceForm"
-                  class="outlineGradient"
-                >
-                  <span>Send</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Order_Form showForm={showForm} showFormFun={showFormFun} selection={"product"}/>
     </content>
   );
 }

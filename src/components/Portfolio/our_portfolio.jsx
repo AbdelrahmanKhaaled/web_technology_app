@@ -1,6 +1,4 @@
-// import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../styles/Portfolio/our_portfolio.css";
 import { motion } from "framer-motion";
 import Project from "../ReusableComponents/project";
@@ -16,6 +14,7 @@ import image_cover8 from "../../assets/portfolio_images/image_cover8.png";
 import image_cover9 from "../../assets/portfolio_images/image_cover9.png";
 import background from "../../assets/body-bg.png";
 import search_icon from "../../assets/search.png";
+import Background_Component from "../ReusableComponents/background_component";
 
 export default function Our_Portfolio() {
   const { t } = useTranslation();
@@ -26,7 +25,7 @@ export default function Our_Portfolio() {
       // desc: "A website for Somu Training Company in the Kingdom of Saudi Arabia.",
       img: image_cover1,
       link: "/portfolio/1",
-      categories: ["website", "ecommerceStores"], // 👈 add this
+      categories: ["website", "ecommerceStores"],
     },
     {
       title: t("portfolioProject2"),
@@ -89,15 +88,8 @@ export default function Our_Portfolio() {
   const [openSection, setOpenSection] = useState("websites");
   const [filters, setFilters] = useState({
     recruitment: false,
-    lawFirm: false,
     maintenanceApps: false,
     ecommerceStores: false,
-    applicationDesign: false,
-    website: false,
-    controlBoard: false,
-    androidApplication: false,
-    iosApp: false,
-    graphicDesign: false,
   });
   const [search, setSearch] = useState("");
 
@@ -110,24 +102,12 @@ export default function Our_Portfolio() {
     setFilters({ ...filters, [name]: checked });
   };
 
-  // const handleApply = () => {
-  //   console.log("Search:", search);
-  //   console.log("Filters:", filters);
-  // };
-
   const handleReset = () => {
     setSearch("");
     setFilters({
       recruitment: false,
-      lawFirm: false,
       maintenanceApps: false,
       ecommerceStores: false,
-      applicationDesign: false,
-      website: false,
-      controlBoard: false,
-      androidApplication: false,
-      iosApp: false,
-      graphicDesign: false,
     });
   };
 
@@ -137,7 +117,7 @@ export default function Our_Portfolio() {
     transition: {
       duration: 0.6,
       delay: delay / 1000,
-      ease: [0.42, 0, 0.58, 1], // smoother natural curve
+      ease: [0.42, 0, 0.58, 1],
     },
     viewport: { once: true, amount: 0.2 },
   });
@@ -147,22 +127,6 @@ export default function Our_Portfolio() {
   const handleApply = () => {
     setApplyNow(true);
   };
-
-  // const activeFilters = Object.keys(filters).filter((key) => filters[key]);
-
-  // const filteredProjects = projects.filter((project) => {
-  //   // Filter by search
-  //   const matchSearch = project.title
-  //     .toLowerCase()
-  //     .includes(search.toLowerCase());
-
-  //   // Filter by selected checkboxes
-  //   const matchFilters =
-  //     activeFilters.length === 0 ||
-  //     activeFilters.some((f) => project.categories.includes(f));
-
-  //   return matchSearch && matchFilters;
-  // });
 
   const activeFilters = Object.keys(filters).filter((key) => filters[key]);
 
@@ -185,21 +149,7 @@ export default function Our_Portfolio() {
       <img src={background} class="body-overlay"></img>
       <section class="activeNavClass our_portfolio" id="our_portfolio">
         <div class="container">
-          <motion.div className="head" {...fadeUp(50)}>
-            <div class="shapes">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="text">
-              <motion.h1 class="title" {...fadeUp(100)}>
-                {t("ourPortfolioHead")}
-              </motion.h1>
-              <motion.h6 class="des" {...fadeUp(150)}>
-                {t("ourPortfolioContent")}
-              </motion.h6>
-            </div>
-          </motion.div>
+          <Background_Component head={t("ourPortfolioHead")} content={t("ourPortfolioContent")}/>
           <div className="layOutProtfolio">
             <motion.div className="filter-sidebar" {...fadeUp(50)}>
               {/* Search box */}
@@ -301,15 +251,8 @@ export default function Our_Portfolio() {
               </button>
             </motion.div>
             <motion.div
-              class="portfolioItems aos-init aos-animate"
-              data-aos="fade-up"
-              id="divToShow"
-              {...fadeUp(50)}
+              class="portfolioItems"
             >
-              {/* {projects.map((item) => (
-                <Project item={item} />
-              ))} */}
-
               {filteredProjects.length > 0 ? (
                 filteredProjects.map((item, index) => (
                   <Project key={index} item={item} />

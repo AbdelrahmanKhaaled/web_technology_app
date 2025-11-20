@@ -1,11 +1,6 @@
-// import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import "./ClothesPage.css";
 import "../../styles/LandingPage/Whatsapp.css"
-import { useTranslation } from "react-i18next";
 
 export default function Whatsapp() {
-  const { t } = useTranslation();
   return (
     <div class="whatsAppCall">
       <a href="https://Wa.me/+41779996081" target="_blank">

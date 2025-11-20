@@ -49,14 +49,14 @@
   position: absolute;
   width: 2px;
   height: 8px;
-  background-color: #0a1e5a; /* navy blue */
+  background-color: #0a1e5a;
   top: 2px;
   border-radius: 2px;
 }
 
 .arrow::before {
-  left: -1.2px;
-  top: -0.2px;
+  left: -1.1px;
+  top: -0.7px;
   transform: rotate(45deg);
   transform-origin: bottom;
 }

@@ -1,20 +1,6 @@
 import "../../styles/ReusableComponents/product.css";
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 
 export default function Product({item, links}) {
-  const { t } = useTranslation();
-
-//   const fadeUp = (delay = 0) => ({
-//     initial: { opacity: 0, y: 50 },
-//     whileInView: { opacity: 1, y: 0 },
-//     transition: {
-//       duration: 0.6,
-//       delay: delay / 1000,
-//       ease: [0.42, 0, 0.58, 1], // smoother natural curve
-//     },
-//     viewport: { once: true, amount: 0.2 },
-//   });
 
   return (
     <div className="productCard"  >

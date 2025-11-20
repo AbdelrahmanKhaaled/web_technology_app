@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 import "../../styles/ReusableComponents/project.css";
-import { useTranslation } from "react-i18next";
 import arrow_4 from "../../assets/arrow-4.png";
-import frame from "../../assets/frame.png";
 
 export default function Project({item, idx}) {
-  const { t } = useTranslation();
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
@@ -22,7 +19,7 @@ export default function Project({item, idx}) {
     <motion.a
       className="portfolioItem show"
       href={item.link}
-      {...fadeUp(150 + idx * 100)} // stagger cards like AOS delays
+      {...fadeUp(150 + idx * 100)}
     >
       <div className="content">
         <div className="top">
@@ -39,10 +36,6 @@ export default function Project({item, idx}) {
       <figure className="image">
         <img className="lazy" src={item.img} alt={item.title} />
       </figure>
-      {/* <figure className="image">
-        <img loading="lazy" src={frame} class="frame" alt="image"></img>
-        <img className="lazy" src={item.img} alt={item.title} />
-      </figure> */}
       
     </motion.a>
   );

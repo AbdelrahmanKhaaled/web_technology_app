@@ -1,0 +1,30 @@
+.serviceArea .allServices .serviceItem .serviceList span {
+  min-width: calc(50% - 8px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--darkColor);
+  opacity: 0;
+  text-align: start;
+  filter: brightness(0.8);
+  transform: translateX(-15px);
+}
+
+.serviceArea .allServices .serviceItem .serviceList span img {
+  filter: var(--Filter);
+}
+
+.serviceLine.show {
+  animation: fadeUp 0.8s forwards ease;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

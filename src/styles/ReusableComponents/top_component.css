@@ -1,0 +1,82 @@
+.container .sectionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  text-align: center !important;
+}
+
+@media (max-width: 768px) {
+  .container .sectionTop {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.container .sectionTop .top {
+  text-align: center;
+  width: min(100% - 40px, 800px);
+  text-wrap: balance;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .container .sectionTop .top {
+    align-items: center;
+    margin: auto;
+  }
+}
+
+.container .sectionTop .top .secSubTitle {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--grayColor);
+}
+
+.container .sectionTop .top .secTitle {
+  font-weight: bold;
+  color: var(--darkColor);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .container .sectionTop .top .secTitle {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.container .sectionTop .outlineGradient {
+  white-space: nowrap;
+}
+
+.container .sectionTop .outlineGradient::after {
+  background: transparent;
+}
+
+.container .sectionTop .outlineGradient span {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  color: var(--whiteColor);
+  transition: var(--transition);
+}
+
+.container .sectionTop .outlineGradient img {
+  filter: brightness(0) invert(1);
+  width: 0;
+  height: 16px;
+  transition: var(--transition);
+}
+
+.container .sectionTop .outlineGradient:hover img {
+  margin-left: 8px;
+  width: 16px;
+}
