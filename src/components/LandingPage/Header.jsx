@@ -138,7 +138,7 @@ export default function Header() {
           </div>
         </nav>
         <button onClick={handleClickLang} class="language outlineGradient">
-          <span>Language</span>
+          <span>{localStorage.getItem("lang")}</span>
         </button>
         <div
           className={`popup ${isLangShow ? "show" : ""}`}
@@ -154,3 +154,4 @@ export default function Header() {
     </header>
   );
 }
+
