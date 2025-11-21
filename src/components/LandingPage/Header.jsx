@@ -53,6 +53,17 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
 
+    const savedLang = localStorage.getItem("lang");
+
+  // If no language is saved → set Italian as default
+  if (!savedLang) {
+    localStorage.setItem("lang", "italian");
+    i18n.changeLanguage("italian");
+  } else {
+    // If a language exists → load it
+    i18n.changeLanguage(savedLang);
+  }
+
     // Cleanup on unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -154,4 +165,5 @@ export default function Header() {
     </header>
   );
 }
+
 
