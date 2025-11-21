@@ -60,7 +60,7 @@ export default function Header() {
     localStorage.setItem("lang", "italian");
     i18n.changeLanguage("italian");
   } else {
-     If a language exists → load it
+    // If a language exists → load it
     i18n.changeLanguage(savedLang);
   }
 
@@ -165,6 +165,7 @@ export default function Header() {
     </header>
   );
 }
+
 
 
 
