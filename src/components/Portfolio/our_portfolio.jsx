@@ -14,11 +14,11 @@ import image_cover8 from "../../assets/portfolio_images/image_cover8.png";
 import image_cover9 from "../../assets/portfolio_images/image_cover9.png";
 
 import project1 from "../../assets/project_mockups/project1.png";
-import project2 from "../../assets/project_mockups/project1.png";
-import project3 from "../../assets/project_mockups/project1.png";
-import project5 from "../../assets/project_mockups/project1.png";
-import project7 from "../../assets/project_mockups/project1.png";
-import project9 from "../../assets/project_mockups/project1.png";
+import project2 from "../../assets/project_mockups/project2.png";
+import project3 from "../../assets/project_mockups/project3.png";
+import project5 from "../../assets/project_mockups/project5.png";
+import project7 from "../../assets/project_mockups/project7.png";
+import project9 from "../../assets/project_mockups/project9.png";
 
 import background from "../../assets/body-bg.png";
 import search_icon from "../../assets/search.png";
@@ -275,5 +275,6 @@ export default function Our_Portfolio() {
     </section>
   );
 }
+
 
 
