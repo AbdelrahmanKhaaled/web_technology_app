@@ -14,6 +14,11 @@ import image_cover8 from "../../assets/portfolio_images/image_cover8.png";
 import image_cover9 from "../../assets/portfolio_images/image_cover9.png";
 
 import project1 from "../../assets/project_mockups/project1.png";
+import project2 from "../../assets/project_mockups/project1.png";
+import project3 from "../../assets/project_mockups/project1.png";
+import project5 from "../../assets/project_mockups/project1.png";
+import project7 from "../../assets/project_mockups/project1.png";
+import project9 from "../../assets/project_mockups/project1.png";
 
 import background from "../../assets/body-bg.png";
 import search_icon from "../../assets/search.png";
@@ -33,14 +38,14 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject2"),
       // desc: "The Abu Batal Slaughterhouse app allows you to purchase the finest livestock meat with ease and convenience...",
-      img: image_cover2,
+      img: project2,
       link: "/portfolio/1",
       categories: ["androidApplication", "applicationDesign"],
     },
     {
       title: t("portfolioProject3"),
       // desc: "With the Ajel app, you can purchase your needs from participating stores...",
-      img: image_cover3,
+      img: project3,
       link: "/portfolio/1",
       categories: ["recruitment", "website"],
     },
@@ -54,7 +59,7 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject5"),
       // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
-      img: image_cover5,
+      img: project5,
       link: "/portfolio/1",
       categories: ["lawFirm", "website"],
     },
@@ -68,7 +73,7 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject7"),
       // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
-      img: image_cover7,
+      img: project7,
       link: "/portfolio/1",
       categories: ["recruitment", "website"],
     },
@@ -82,7 +87,7 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject9"),
       // desc: "A website for Ebhar Platform for book publishing and distribution.",
-      img: image_cover9,
+      img: project9,
       link: "/portfolio/1",
       categories: ["androidApplication", "applicationDesign"],
     },
@@ -270,4 +275,5 @@ export default function Our_Portfolio() {
     </section>
   );
 }
+
 
