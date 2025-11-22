@@ -52,7 +52,7 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject4"),
       // desc: "A website for Dar Daleel Real Estate, a leading real estate company specializing in property marketing and management...",
-      img: image_cover4,
+      img: project9,
       link: "/portfolio/1",
       categories: ["ecommerceStores", "website"],
     },
@@ -66,7 +66,7 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject6"),
       // desc: "A website for Ebhar Platform for book publishing and distribution.",
-      img: image_cover6,
+      img: project5,
       link: "/portfolio/1",
       categories: ["androidApplication", "ecommerceStores"],
     },
@@ -80,7 +80,7 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject8"),
       // desc: "A website for Tamim Al-Hussainan Law Firm and Legal Consultations in the Kingdom of Saudi Arabia.",
-      img: image_cover8,
+      img: project1,
       link: "/portfolio/1",
       categories: ["androidApplication", "website"],
     },
@@ -275,6 +275,7 @@ export default function Our_Portfolio() {
     </section>
   );
 }
+
 
 
 
