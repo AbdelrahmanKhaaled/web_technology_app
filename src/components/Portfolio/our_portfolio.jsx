@@ -12,6 +12,9 @@ import image_cover6 from "../../assets/portfolio_images/image_cover6.png";
 import image_cover7 from "../../assets/portfolio_images/image_cover7.png";
 import image_cover8 from "../../assets/portfolio_images/image_cover8.png";
 import image_cover9 from "../../assets/portfolio_images/image_cover9.png";
+
+import project1 from "../../assets/project_mockups/project1.png";
+
 import background from "../../assets/body-bg.png";
 import search_icon from "../../assets/search.png";
 import Background_Component from "../ReusableComponents/background_component";
@@ -23,7 +26,7 @@ export default function Our_Portfolio() {
     {
       title: t("portfolioProject1"),
       // desc: "A website for Somu Training Company in the Kingdom of Saudi Arabia.",
-      img: image_cover1,
+      img: project1,
       link: "/portfolio/1",
       categories: ["website", "ecommerceStores"],
     },
@@ -267,3 +270,4 @@ export default function Our_Portfolio() {
     </section>
   );
 }
+
