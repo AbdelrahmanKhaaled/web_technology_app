@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import arrow from "../../assets/pageArrow.png";
 
-export default function Top_Component({ head, content }) {
+export default function Top_Component({ head, content, link }) {
   const { t } = useTranslation();
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 50 },
@@ -27,7 +27,7 @@ export default function Top_Component({ head, content }) {
         </motion.h1>
       </div>
 
-      <motion.a href="portfolio" className="outlineGradient" {...fadeUp(150)}>
+      <motion.a href={link} className="outlineGradient" {...fadeUp(150)}>
         <span>
           {t("portfolioShowAll")}
           <img loading="lazy" src={arrow} alt="arrow" />
@@ -36,3 +36,4 @@ export default function Top_Component({ head, content }) {
     </motion.div>
   );
 }
+
