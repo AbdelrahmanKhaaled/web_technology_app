@@ -23,7 +23,7 @@ export default function Header() {
     { name: t("headerServices"), link: "services", type: "section" },
     // { name: t("headerProducts"), link: "products", type: "page" },
     { name: t("headerPortfolio"), link: "portfolio", type: "page" },
-    { name: t("headerMarketing"), link: "marketing", type: "page" },
+    // { name: t("headerMarketing"), link: "marketing", type: "page" },
     { name: t("headerCareers"), link: "careers", type: "section" },
     { name: t("headerContact"), link: "contact", type: "section" },
   ];
@@ -168,6 +168,7 @@ export default function Header() {
     </header>
   );
 }
+
 
 
 
