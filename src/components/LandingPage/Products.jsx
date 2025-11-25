@@ -52,7 +52,7 @@ export default function Products() {
     <section className="activeNavClass ourProducts" id="products">
       <div className="container">
         {/* Section Top */}
-        {/* <Top_Component head={t("portfolioHead1")} content={t("portfolioHead2")} /> */}
+        {/* <Top_Component head={t("portfolioHead1")} content={t("portfolioHead2")} link={"products"}/> */}
 
         {/* Swiper Section */}
         <motion.div {...fadeUp(200)}>
@@ -94,3 +94,4 @@ export default function Products() {
     </section>
   );
 }
+
