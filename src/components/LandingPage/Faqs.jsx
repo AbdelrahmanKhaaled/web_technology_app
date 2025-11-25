@@ -23,7 +23,7 @@ export default function Faqs() {
   return (
     <section class="faqSection activeNavClass" id="faq">
       <div class="container">
-        <Top_Component head={t("faqHead1")} content={t("faqHead2")}/>
+        <Top_Component head={t("faqHead1")} content={t("faqHead2")} link={"faqs"}/>
         <motion.div className="faq-item" {...fadeUp(200)}>
           <div className="faq-question" onClick={() => setOpen(!open)}>
             <h3 className={`${open ? "Colored" : ""}`}>
@@ -42,3 +42,4 @@ export default function Faqs() {
     </section>
   );
 }
+
