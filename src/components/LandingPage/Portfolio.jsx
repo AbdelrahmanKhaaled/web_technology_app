@@ -100,7 +100,7 @@ export default function Portfolio() {
     <section className="activeNavClass portfolio" id="portfolio">
       <div className="container">
         {/* ===== Section Top ===== */}
-        <Top_Component head={t("portfolioHead1")} content={t("portfolioHead2")} />
+        <Top_Component head={t("portfolioHead1")} content={t("portfolioHead2")} link={"portfolio"}/>
         {/* ===== Swiper Section ===== */}
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -136,4 +136,5 @@ export default function Portfolio() {
     </section>
   );
 }
+
 
