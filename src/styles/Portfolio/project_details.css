@@ -126,6 +126,7 @@ image .phoneView .swiper {
   display: block;
   width: 100%;
   border-radius: 16px;
+  margin-top: 7px;
 }
 
 .phoneView .swiper-3d .swiper-slide-shadow-left {
@@ -138,12 +139,12 @@ image .phoneView .swiper {
 
 .phoneView .swiper .frame {
   width: 270px;
-  height: 535px;
+  height: 521px;
   position: absolute;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
   z-index: 2;
-
   pointer-events: none;
 }
+
