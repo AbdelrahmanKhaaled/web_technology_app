@@ -231,7 +231,7 @@ export default function Contact() {
                   <div class="text">
                     <h4>{t("contactCall")}</h4>
                     <div class="d-flex flex-column gap-2">
-                      <a href="tel:+41779996081">+41779996081</a>
+                      <a href="tel:+41797581929">+41 79 758 19 29</a>
                     </div>
                   </div>
                 </motion.li>
@@ -243,3 +243,4 @@ export default function Contact() {
     </div>
   );
 }
+
