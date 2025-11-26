@@ -1,5 +1,4 @@
 .content {
-  min-height: calc(100dvh - 660px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -16,4 +15,5 @@
   height: 100%;
   background-repeat: repeat;
   background-position: top right;
+
 }
