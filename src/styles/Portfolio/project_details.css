@@ -108,7 +108,7 @@ image .phoneView .swiper {
   background-position: center;
   background-size: cover;
   width: 234px;
-  height: 507px;
+  height: 535px;
   position: relative;
 }
 
@@ -117,7 +117,7 @@ image .phoneView .swiper {
     background-position: center;
     background-size: cover;
     width: 234px;
-    height: 507px;
+    height: 535px;
     position: relative;
   }
 }
@@ -139,7 +139,7 @@ image .phoneView .swiper {
 
 .phoneView .swiper .frame {
   width: 270px;
-  height: 521px;
+  height: 535px;
   position: absolute;
   top: 50%;
   right: 50%;
@@ -147,4 +147,5 @@ image .phoneView .swiper {
   z-index: 2;
   pointer-events: none;
 }
+
 
