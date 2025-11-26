@@ -3,7 +3,7 @@ import "../../styles/LandingPage/Whatsapp.css"
 export default function Whatsapp() {
   return (
     <div class="whatsAppCall">
-      <a href="https://Wa.me/+41779996081" target="_blank">
+      <a href="https://Wa.me/+41797581929" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -45,7 +45,7 @@ export default function Whatsapp() {
           </g>
         </svg>
       </a>
-      <a href="tel:+41779996081" target="_blank">
+      <a href="tel:+41797581929" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -76,3 +76,4 @@ export default function Whatsapp() {
     </div>
   );
 }
+
